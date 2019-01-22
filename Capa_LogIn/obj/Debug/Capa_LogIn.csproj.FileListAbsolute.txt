@@ -1,0 +1,6 @@
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa_LogIn\bin\Debug\Capa_LogIn.dll
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa_LogIn\bin\Debug\Capa_LogIn.pdb
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa_LogIn\obj\Debug\Capa_LogIn.csprojAssemblyReference.cache
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa_LogIn\obj\Debug\Capa_LogIn.csproj.CoreCompileInputs.cache
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa_LogIn\obj\Debug\Capa_LogIn.dll
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa_LogIn\obj\Debug\Capa_LogIn.pdb

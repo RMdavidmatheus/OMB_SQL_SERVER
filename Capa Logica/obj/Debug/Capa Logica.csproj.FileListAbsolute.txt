@@ -1,0 +1,8 @@
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa Logica\bin\Debug\Capa Logica.dll
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa Logica\bin\Debug\Capa Logica.pdb
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa Logica\obj\Debug\Capa Logica.csprojAssemblyReference.cache
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa Logica\obj\Debug\Capa Logica.csproj.CoreCompileInputs.cache
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa Logica\obj\Debug\Capa Logica.dll
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa Logica\obj\Debug\Capa Logica.pdb
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa Logica\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Capa Logica\obj\Debug\Capa Logica.csproj.CopyComplete
