@@ -26,7 +26,7 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 Primary.Blue900, Primary.Blue800,
                 Primary.Teal900, Accent.Teal700,
                 TextShade.WHITE);
-            Vehiculo_tab.Parent = null;
+            //Vehiculo_tab.Parent = null;
 
         }
         // DOUBLES PARA BASE DE DATOS
@@ -386,6 +386,8 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 Txt_Valor_Auto.Text = num_2.ToString("N0");
                 Txt_Valor_Auto.SelectionStart = Txt_Valor_Auto.TextLength;
             }
+            // MENSAJES DE INFORMACION...
+            Mensaje.SetToolTip(Drop_Tp_Doc_Tom, "Documento para el tomador");
         }
 
         private void Act_Tom_Click(object sender, EventArgs e)

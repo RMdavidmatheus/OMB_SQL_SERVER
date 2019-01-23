@@ -48,6 +48,7 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
         private void Añadir_Click(object sender, EventArgs e)
         {
             Agregar_Editar Añadir = new Agregar_Editar();
+            Añadir.Vehiculo_tab.Parent = null;
             Añadir.Text = "Añadir datos";
             Añadir.Act_Tom.Visible = false;
             Añadir.Act_Ben.Visible = false;
@@ -64,6 +65,15 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
             if (DataGrid_Listado_Polizas.SelectedRows.Count > 0)
             {
+                // Ocultando vehiculo tab
+                if (DataGrid_Listado_Polizas.CurrentRow.Cells[3].Value.Equals("AUTOS"))
+                {
+                    Editar.Vehiculo_tab.Parent = Editar.Contenido_control;
+                }
+                else
+                {
+                    Editar.Vehiculo_tab.Parent = null;
+                }
                 // OCULTANDO BOTON GUARDAR, EVITANDO MODIFICAR LLAVES PRIMARIAS DEL REGISTRO...
                 Editar.Guardar_Tom.Visible = false;
                 Editar.Guardar_Ben.Visible = false;

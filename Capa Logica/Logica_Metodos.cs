@@ -53,6 +53,57 @@ namespace Capa_Logica
             }
             Conexion.Desconectar();
         }
+        // METODO PARA LLENAR DATAGRID LISTADO DE VEHICULOS
+        public void LlenarTabla_Vehiculos(DataGridView Llenar)
+        {
+            try
+            {
+                SqlCommand query = new SqlCommand("SELECT* from Vista_Vehiculos", Conexion.Conectar());
+                SqlDataAdapter rs = new SqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                rs.Fill(dt);
+                Llenar.DataSource = dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Conexion.Desconectar();
+        }
+        // METODO PARA LLENAR DATAGRID TOMADORES
+        public void LlenarTabla_Tomador(DataGridView Llenar)
+        {
+            try
+            {
+                SqlCommand query = new SqlCommand("SELECT* from Vista_Tomador", Conexion.Conectar());
+                SqlDataAdapter rs = new SqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                rs.Fill(dt);
+                Llenar.DataSource = dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Conexion.Desconectar();
+        }
+        // METODO PARA LLENAR DATAGRID BENEFICIARIOS
+        public void LlenarTabla_Beneficiario(DataGridView Llenar)
+        {
+            try
+            {
+                SqlCommand query = new SqlCommand("SELECT* from Vista_Beneficiario", Conexion.Conectar());
+                SqlDataAdapter rs = new SqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                rs.Fill(dt);
+                Llenar.DataSource = dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Conexion.Desconectar();
+        }
         // METODO PARA INSERT
         public bool Insertar(string query)
         {

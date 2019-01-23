@@ -33,6 +33,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Contenido_control = new MaterialSkin.Controls.MaterialTabControl();
             this.Tomador_tab = new System.Windows.Forms.TabPage();
+            this.Act_Tom = new MaterialSkin.Controls.MaterialRaisedButton();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.Pb_Calendar_Tom = new Bunifu.Framework.UI.BunifuImageButton();
             this.Txt_Fecha_Nacimiento_Tom = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -47,6 +48,7 @@
             this.Txt_Doc_Tom = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Beneficiario_tab = new System.Windows.Forms.TabPage();
+            this.Act_Ben = new MaterialSkin.Controls.MaterialRaisedButton();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.PB_Calendar_Ben = new Bunifu.Framework.UI.BunifuImageButton();
             this.Txt_Fecha_Nacimiento_Ben = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -61,6 +63,7 @@
             this.Txt_Doc_Ben = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Poliza_tab = new System.Windows.Forms.TabPage();
+            this.Act_Pol = new MaterialSkin.Controls.MaterialRaisedButton();
             this.img_Calendar_Pol_1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.Fecha_inicial = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.CB_Ramo = new Bunifu.Framework.UI.BunifuDropdown();
@@ -74,6 +77,7 @@
             this.Txt_No_Poliza = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Vehiculo_tab = new System.Windows.Forms.TabPage();
+            this.Act_Veh = new MaterialSkin.Controls.MaterialRaisedButton();
             this.Txt_Modelo = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator7 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -88,10 +92,7 @@
             this.Txt_Fasecolda = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.Txt_Placa = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.TabSelector = new MaterialSkin.Controls.MaterialTabSelector();
-            this.Act_Tom = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.Act_Ben = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.Act_Pol = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.Act_Veh = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.Mensaje = new System.Windows.Forms.ToolTip(this.components);
             this.Contenido_control.SuspendLayout();
             this.Tomador_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Calendar_Tom)).BeginInit();
@@ -151,6 +152,19 @@
             this.Tomador_tab.TabIndex = 0;
             this.Tomador_tab.Text = "Tomador";
             // 
+            // Act_Tom
+            // 
+            this.Act_Tom.Depth = 0;
+            this.Act_Tom.Location = new System.Drawing.Point(133, 564);
+            this.Act_Tom.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Act_Tom.Name = "Act_Tom";
+            this.Act_Tom.Primary = true;
+            this.Act_Tom.Size = new System.Drawing.Size(195, 44);
+            this.Act_Tom.TabIndex = 14;
+            this.Act_Tom.Text = "actualizar";
+            this.Act_Tom.UseVisualStyleBackColor = true;
+            this.Act_Tom.Click += new System.EventHandler(this.Act_Tom_Click);
+            // 
             // bunifuSeparator2
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
@@ -174,6 +188,7 @@
             this.Pb_Calendar_Tom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Pb_Calendar_Tom.TabIndex = 12;
             this.Pb_Calendar_Tom.TabStop = false;
+            this.Mensaje.SetToolTip(this.Pb_Calendar_Tom, "Seleccionar fehca de nacimiento del tomador");
             this.Pb_Calendar_Tom.Zoom = 10;
             this.Pb_Calendar_Tom.Click += new System.EventHandler(this.Pb_Calendar_Tom_Click);
             // 
@@ -192,6 +207,7 @@
             this.Txt_Fecha_Nacimiento_Tom.Size = new System.Drawing.Size(166, 23);
             this.Txt_Fecha_Nacimiento_Tom.TabIndex = 7;
             this.Txt_Fecha_Nacimiento_Tom.Text = "Fecha de nacimiento...";
+            this.Mensaje.SetToolTip(this.Txt_Fecha_Nacimiento_Tom, "Campo fehca de nacimiento del tomador");
             this.Txt_Fecha_Nacimiento_Tom.UseSystemPasswordChar = false;
             // 
             // Guardar_Tom
@@ -228,6 +244,7 @@
             this.Drop_Tp_Doc_Tom.selectedIndex = 0;
             this.Drop_Tp_Doc_Tom.Size = new System.Drawing.Size(383, 46);
             this.Drop_Tp_Doc_Tom.TabIndex = 1;
+            this.Mensaje.SetToolTip(this.Drop_Tp_Doc_Tom, "Tipo Documento");
             // 
             // Txt_Email_Tom
             // 
@@ -242,6 +259,7 @@
             this.Txt_Email_Tom.SelectionStart = 0;
             this.Txt_Email_Tom.Size = new System.Drawing.Size(383, 23);
             this.Txt_Email_Tom.TabIndex = 6;
+            this.Mensaje.SetToolTip(this.Txt_Email_Tom, "Campo email tomador");
             this.Txt_Email_Tom.UseSystemPasswordChar = false;
             // 
             // bunifuSeparator1
@@ -269,6 +287,7 @@
             this.Txt_Tel_Tom.SelectionStart = 0;
             this.Txt_Tel_Tom.Size = new System.Drawing.Size(383, 23);
             this.Txt_Tel_Tom.TabIndex = 5;
+            this.Mensaje.SetToolTip(this.Txt_Tel_Tom, "Campo telefono tomador");
             this.Txt_Tel_Tom.UseSystemPasswordChar = false;
             // 
             // Txt_Direccion_Tom
@@ -284,6 +303,7 @@
             this.Txt_Direccion_Tom.SelectionStart = 0;
             this.Txt_Direccion_Tom.Size = new System.Drawing.Size(383, 23);
             this.Txt_Direccion_Tom.TabIndex = 4;
+            this.Mensaje.SetToolTip(this.Txt_Direccion_Tom, "Campo direccion tomador");
             this.Txt_Direccion_Tom.UseSystemPasswordChar = false;
             // 
             // Txt_Ape_Tom
@@ -299,6 +319,7 @@
             this.Txt_Ape_Tom.SelectionStart = 0;
             this.Txt_Ape_Tom.Size = new System.Drawing.Size(383, 23);
             this.Txt_Ape_Tom.TabIndex = 3;
+            this.Mensaje.SetToolTip(this.Txt_Ape_Tom, "Campo apellido tomador");
             this.Txt_Ape_Tom.UseSystemPasswordChar = false;
             // 
             // Txt_Nom_Tom
@@ -314,6 +335,7 @@
             this.Txt_Nom_Tom.SelectionStart = 0;
             this.Txt_Nom_Tom.Size = new System.Drawing.Size(383, 23);
             this.Txt_Nom_Tom.TabIndex = 2;
+            this.Mensaje.SetToolTip(this.Txt_Nom_Tom, "Campo nombre tomador");
             this.Txt_Nom_Tom.UseSystemPasswordChar = false;
             // 
             // Txt_Doc_Tom
@@ -329,6 +351,7 @@
             this.Txt_Doc_Tom.SelectionStart = 0;
             this.Txt_Doc_Tom.Size = new System.Drawing.Size(383, 23);
             this.Txt_Doc_Tom.TabIndex = 0;
+            this.Mensaje.SetToolTip(this.Txt_Doc_Tom, "Campo documento tomador");
             this.Txt_Doc_Tom.UseSystemPasswordChar = false;
             // 
             // pictureBox1
@@ -365,6 +388,19 @@
             this.Beneficiario_tab.TabIndex = 1;
             this.Beneficiario_tab.Text = "Beneficiario";
             // 
+            // Act_Ben
+            // 
+            this.Act_Ben.Depth = 0;
+            this.Act_Ben.Location = new System.Drawing.Point(133, 564);
+            this.Act_Ben.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Act_Ben.Name = "Act_Ben";
+            this.Act_Ben.Primary = true;
+            this.Act_Ben.Size = new System.Drawing.Size(195, 44);
+            this.Act_Ben.TabIndex = 27;
+            this.Act_Ben.Text = "ACTUALIZAR";
+            this.Act_Ben.UseVisualStyleBackColor = true;
+            this.Act_Ben.Click += new System.EventHandler(this.Act_Ben_Click);
+            // 
             // bunifuSeparator3
             // 
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
@@ -388,6 +424,7 @@
             this.PB_Calendar_Ben.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PB_Calendar_Ben.TabIndex = 25;
             this.PB_Calendar_Ben.TabStop = false;
+            this.Mensaje.SetToolTip(this.PB_Calendar_Ben, "Seleccionar fecha de nacimiento del beneficiario");
             this.PB_Calendar_Ben.Zoom = 10;
             this.PB_Calendar_Ben.Click += new System.EventHandler(this.PB_Calendar_Ben_Click);
             // 
@@ -456,6 +493,7 @@
             this.Txt_Email_Ben.SelectionStart = 0;
             this.Txt_Email_Ben.Size = new System.Drawing.Size(383, 23);
             this.Txt_Email_Ben.TabIndex = 21;
+            this.Mensaje.SetToolTip(this.Txt_Email_Ben, "Campo email beneficiario");
             this.Txt_Email_Ben.UseSystemPasswordChar = false;
             // 
             // bunifuSeparator4
@@ -483,6 +521,7 @@
             this.Txt_Tel_Ben.SelectionStart = 0;
             this.Txt_Tel_Ben.Size = new System.Drawing.Size(383, 23);
             this.Txt_Tel_Ben.TabIndex = 20;
+            this.Mensaje.SetToolTip(this.Txt_Tel_Ben, "Campo telefono beneficiario");
             this.Txt_Tel_Ben.UseSystemPasswordChar = false;
             // 
             // Txt_Dir_Ben
@@ -498,6 +537,7 @@
             this.Txt_Dir_Ben.SelectionStart = 0;
             this.Txt_Dir_Ben.Size = new System.Drawing.Size(383, 23);
             this.Txt_Dir_Ben.TabIndex = 19;
+            this.Mensaje.SetToolTip(this.Txt_Dir_Ben, "Campo direccion beneficiario");
             this.Txt_Dir_Ben.UseSystemPasswordChar = false;
             // 
             // Txt_Ape_Ben
@@ -513,6 +553,7 @@
             this.Txt_Ape_Ben.SelectionStart = 0;
             this.Txt_Ape_Ben.Size = new System.Drawing.Size(383, 23);
             this.Txt_Ape_Ben.TabIndex = 18;
+            this.Mensaje.SetToolTip(this.Txt_Ape_Ben, "Campo apellidos beneficiario");
             this.Txt_Ape_Ben.UseSystemPasswordChar = false;
             // 
             // Txt_Nom_Ben
@@ -528,6 +569,7 @@
             this.Txt_Nom_Ben.SelectionStart = 0;
             this.Txt_Nom_Ben.Size = new System.Drawing.Size(383, 23);
             this.Txt_Nom_Ben.TabIndex = 17;
+            this.Mensaje.SetToolTip(this.Txt_Nom_Ben, "Campo nombres beneficiario");
             this.Txt_Nom_Ben.UseSystemPasswordChar = false;
             // 
             // Txt_Doc_Ben
@@ -543,6 +585,7 @@
             this.Txt_Doc_Ben.SelectionStart = 0;
             this.Txt_Doc_Ben.Size = new System.Drawing.Size(383, 23);
             this.Txt_Doc_Ben.TabIndex = 14;
+            this.Mensaje.SetToolTip(this.Txt_Doc_Ben, "Campo documento beneficiario");
             this.Txt_Doc_Ben.UseSystemPasswordChar = false;
             // 
             // pictureBox2
@@ -577,6 +620,19 @@
             this.Poliza_tab.TabIndex = 2;
             this.Poliza_tab.Text = "Poliza";
             // 
+            // Act_Pol
+            // 
+            this.Act_Pol.Depth = 0;
+            this.Act_Pol.Location = new System.Drawing.Point(134, 527);
+            this.Act_Pol.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Act_Pol.Name = "Act_Pol";
+            this.Act_Pol.Primary = true;
+            this.Act_Pol.Size = new System.Drawing.Size(195, 44);
+            this.Act_Pol.TabIndex = 43;
+            this.Act_Pol.Text = "ACTUALIZAR";
+            this.Act_Pol.UseVisualStyleBackColor = true;
+            this.Act_Pol.Click += new System.EventHandler(this.Act_Pol_Click);
+            // 
             // img_Calendar_Pol_1
             // 
             this.img_Calendar_Pol_1.BackColor = System.Drawing.Color.White;
@@ -588,6 +644,7 @@
             this.img_Calendar_Pol_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_Calendar_Pol_1.TabIndex = 42;
             this.img_Calendar_Pol_1.TabStop = false;
+            this.Mensaje.SetToolTip(this.img_Calendar_Pol_1, "Seleccionar fecha inicial de vigencia");
             this.img_Calendar_Pol_1.Zoom = 10;
             this.img_Calendar_Pol_1.Click += new System.EventHandler(this.img_Calendar_Pol_1_Click);
             // 
@@ -659,6 +716,7 @@
             this.img_Calendar_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_Calendar_2.TabIndex = 38;
             this.img_Calendar_2.TabStop = false;
+            this.Mensaje.SetToolTip(this.img_Calendar_2, "Seleccionar fecha final de vigencia");
             this.img_Calendar_2.Zoom = 10;
             this.img_Calendar_2.Click += new System.EventHandler(this.img_Calendar_2_Click);
             // 
@@ -738,6 +796,7 @@
             this.Txt_Valor_Prima.SelectionStart = 0;
             this.Txt_Valor_Prima.Size = new System.Drawing.Size(383, 23);
             this.Txt_Valor_Prima.TabIndex = 34;
+            this.Mensaje.SetToolTip(this.Txt_Valor_Prima, "Campo valor de prima");
             this.Txt_Valor_Prima.UseSystemPasswordChar = false;
             this.Txt_Valor_Prima.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Txt_Valor_Prima_KeyUp);
             this.Txt_Valor_Prima.TextChanged += new System.EventHandler(this.Txt_Valor_Prima_TextChanged);
@@ -767,6 +826,7 @@
             this.Txt_No_Poliza.SelectionStart = 0;
             this.Txt_No_Poliza.Size = new System.Drawing.Size(383, 23);
             this.Txt_No_Poliza.TabIndex = 27;
+            this.Mensaje.SetToolTip(this.Txt_No_Poliza, "Campo numero de poliza");
             this.Txt_No_Poliza.UseSystemPasswordChar = false;
             // 
             // pictureBox3
@@ -802,6 +862,19 @@
             this.Vehiculo_tab.TabIndex = 3;
             this.Vehiculo_tab.Text = "Vehiculo";
             // 
+            // Act_Veh
+            // 
+            this.Act_Veh.Depth = 0;
+            this.Act_Veh.Location = new System.Drawing.Point(133, 562);
+            this.Act_Veh.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Act_Veh.Name = "Act_Veh";
+            this.Act_Veh.Primary = true;
+            this.Act_Veh.Size = new System.Drawing.Size(195, 44);
+            this.Act_Veh.TabIndex = 42;
+            this.Act_Veh.Text = "ACTUALIZAR";
+            this.Act_Veh.UseVisualStyleBackColor = true;
+            this.Act_Veh.Click += new System.EventHandler(this.Act_Veh_Click);
+            // 
             // Txt_Modelo
             // 
             this.Txt_Modelo.Depth = 0;
@@ -815,6 +888,7 @@
             this.Txt_Modelo.SelectionStart = 0;
             this.Txt_Modelo.Size = new System.Drawing.Size(383, 23);
             this.Txt_Modelo.TabIndex = 41;
+            this.Mensaje.SetToolTip(this.Txt_Modelo, "Campo modelo");
             this.Txt_Modelo.UseSystemPasswordChar = false;
             // 
             // pictureBox4
@@ -850,6 +924,7 @@
             this.PB_Calendar_Soat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PB_Calendar_Soat.TabIndex = 38;
             this.PB_Calendar_Soat.TabStop = false;
+            this.Mensaje.SetToolTip(this.PB_Calendar_Soat, "Seleccionar vigencia del soat");
             this.PB_Calendar_Soat.Zoom = 10;
             this.PB_Calendar_Soat.Click += new System.EventHandler(this.PB_Calendar_Soat_Click);
             // 
@@ -896,6 +971,7 @@
             this.Txt_Valor_Auto.SelectionStart = 0;
             this.Txt_Valor_Auto.Size = new System.Drawing.Size(383, 23);
             this.Txt_Valor_Auto.TabIndex = 34;
+            this.Mensaje.SetToolTip(this.Txt_Valor_Auto, "Campo valor del auto");
             this.Txt_Valor_Auto.UseSystemPasswordChar = false;
             this.Txt_Valor_Auto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Txt_Valor_Auto_KeyUp);
             // 
@@ -924,6 +1000,7 @@
             this.Txt_Marca.SelectionStart = 0;
             this.Txt_Marca.Size = new System.Drawing.Size(383, 23);
             this.Txt_Marca.TabIndex = 33;
+            this.Mensaje.SetToolTip(this.Txt_Marca, "Campo marca");
             this.Txt_Marca.UseSystemPasswordChar = false;
             // 
             // Txt_Clase
@@ -939,6 +1016,7 @@
             this.Txt_Clase.SelectionStart = 0;
             this.Txt_Clase.Size = new System.Drawing.Size(383, 23);
             this.Txt_Clase.TabIndex = 32;
+            this.Mensaje.SetToolTip(this.Txt_Clase, "Campo clase");
             this.Txt_Clase.UseSystemPasswordChar = false;
             // 
             // Txt_Servicio
@@ -954,6 +1032,7 @@
             this.Txt_Servicio.SelectionStart = 0;
             this.Txt_Servicio.Size = new System.Drawing.Size(383, 23);
             this.Txt_Servicio.TabIndex = 31;
+            this.Mensaje.SetToolTip(this.Txt_Servicio, "Campo servicio");
             this.Txt_Servicio.UseSystemPasswordChar = false;
             // 
             // Txt_Fasecolda
@@ -969,6 +1048,7 @@
             this.Txt_Fasecolda.SelectionStart = 0;
             this.Txt_Fasecolda.Size = new System.Drawing.Size(383, 23);
             this.Txt_Fasecolda.TabIndex = 30;
+            this.Mensaje.SetToolTip(this.Txt_Fasecolda, "Campo fasecolda");
             this.Txt_Fasecolda.UseSystemPasswordChar = false;
             // 
             // Txt_Placa
@@ -984,6 +1064,7 @@
             this.Txt_Placa.SelectionStart = 0;
             this.Txt_Placa.Size = new System.Drawing.Size(383, 23);
             this.Txt_Placa.TabIndex = 27;
+            this.Mensaje.SetToolTip(this.Txt_Placa, "Campo placa");
             this.Txt_Placa.UseSystemPasswordChar = false;
             // 
             // TabSelector
@@ -997,57 +1078,13 @@
             this.TabSelector.TabIndex = 1;
             this.TabSelector.Text = "materialTabSelector1";
             // 
-            // Act_Tom
+            // Mensaje
             // 
-            this.Act_Tom.Depth = 0;
-            this.Act_Tom.Location = new System.Drawing.Point(133, 564);
-            this.Act_Tom.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Act_Tom.Name = "Act_Tom";
-            this.Act_Tom.Primary = true;
-            this.Act_Tom.Size = new System.Drawing.Size(195, 44);
-            this.Act_Tom.TabIndex = 14;
-            this.Act_Tom.Text = "actualizar";
-            this.Act_Tom.UseVisualStyleBackColor = true;
-            this.Act_Tom.Click += new System.EventHandler(this.Act_Tom_Click);
-            // 
-            // Act_Ben
-            // 
-            this.Act_Ben.Depth = 0;
-            this.Act_Ben.Location = new System.Drawing.Point(133, 564);
-            this.Act_Ben.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Act_Ben.Name = "Act_Ben";
-            this.Act_Ben.Primary = true;
-            this.Act_Ben.Size = new System.Drawing.Size(195, 44);
-            this.Act_Ben.TabIndex = 27;
-            this.Act_Ben.Text = "ACTUALIZAR";
-            this.Act_Ben.UseVisualStyleBackColor = true;
-            this.Act_Ben.Click += new System.EventHandler(this.Act_Ben_Click);
-            // 
-            // Act_Pol
-            // 
-            this.Act_Pol.Depth = 0;
-            this.Act_Pol.Location = new System.Drawing.Point(134, 527);
-            this.Act_Pol.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Act_Pol.Name = "Act_Pol";
-            this.Act_Pol.Primary = true;
-            this.Act_Pol.Size = new System.Drawing.Size(195, 44);
-            this.Act_Pol.TabIndex = 43;
-            this.Act_Pol.Text = "ACTUALIZAR";
-            this.Act_Pol.UseVisualStyleBackColor = true;
-            this.Act_Pol.Click += new System.EventHandler(this.Act_Pol_Click);
-            // 
-            // Act_Veh
-            // 
-            this.Act_Veh.Depth = 0;
-            this.Act_Veh.Location = new System.Drawing.Point(133, 562);
-            this.Act_Veh.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Act_Veh.Name = "Act_Veh";
-            this.Act_Veh.Primary = true;
-            this.Act_Veh.Size = new System.Drawing.Size(195, 44);
-            this.Act_Veh.TabIndex = 42;
-            this.Act_Veh.Text = "ACTUALIZAR";
-            this.Act_Veh.UseVisualStyleBackColor = true;
-            this.Act_Veh.Click += new System.EventHandler(this.Act_Veh_Click);
+            this.Mensaje.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Mensaje.ForeColor = System.Drawing.SystemColors.Info;
+            this.Mensaje.IsBalloon = true;
+            this.Mensaje.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.Mensaje.ToolTipTitle = "Informacion";
             // 
             // Agregar_Editar
             // 
@@ -1143,5 +1180,6 @@
         public MaterialSkin.Controls.MaterialRaisedButton Act_Ben;
         public MaterialSkin.Controls.MaterialRaisedButton Act_Pol;
         public MaterialSkin.Controls.MaterialRaisedButton Act_Veh;
+        private System.Windows.Forms.ToolTip Mensaje;
     }
 }

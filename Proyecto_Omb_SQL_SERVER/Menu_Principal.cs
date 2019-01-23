@@ -68,6 +68,9 @@ namespace Proyecto_Omb_SQL_SERVER
             Arrow.Hide();
             Titulo.Hide();
             Bienvenida.Text = "Bienvenido/a "+Usuario_Titulo_Barra;
+            // INSTANCIANDO BIENVENIDA FORM
+
+            Metodos.Abrir_Formulario_En_Panel(Panel_contenido,new Vistas.Vista_Inicio());
         }
 
         private void btn_Tomadores_Click(object sender, EventArgs e)
@@ -80,6 +83,7 @@ namespace Proyecto_Omb_SQL_SERVER
             // MOSTRANDO ANIMACION DE LOS TITULOS
             Animacion_TXTS.ShowSync(Arrow);
             Animacion_TXTS.ShowSync(Titulo);
+            Metodos.Abrir_Formulario_En_Panel(Panel_contenido,new Vistas.Listado_Tomadores());
         }
 
         private void btn_Beneficiarios_Click(object sender, EventArgs e)
@@ -92,6 +96,7 @@ namespace Proyecto_Omb_SQL_SERVER
             // MOSTRANDO ANIMACION DE LOS TITULOS
             Animacion_TXTS.ShowSync(Arrow);
             Animacion_TXTS.ShowSync(Titulo);
+            Metodos.Abrir_Formulario_En_Panel(Panel_contenido,new Vistas.Listado_Beneficiarios());
         }
 
         private void btn_Vehiculos_Click(object sender, EventArgs e)
@@ -104,6 +109,7 @@ namespace Proyecto_Omb_SQL_SERVER
             // MOSTRANDO ANIMACION DE LOS TITULOS
             Animacion_TXTS.ShowSync(Arrow);
             Animacion_TXTS.ShowSync(Titulo);
+            Metodos.Abrir_Formulario_En_Panel(Panel_contenido, new Vistas.Listado_Vehiculos());
         }
 
         private void btn_Reportes_Click(object sender, EventArgs e)
@@ -127,10 +133,14 @@ namespace Proyecto_Omb_SQL_SERVER
                 Panel_Menu.Width = 300;
                 Menu_Animacion_2.ShowSync(Panel_Menu);
                 Animacion_logo.ShowSync(pictureBox2);
+                Animacion_logo.ShowSync(Hora);
+                Animacion_logo.ShowSync(Date);
             }
             else
             {
                 Animacion_logo.HideSync(pictureBox2);
+                Animacion_logo.HideSync(Hora);
+                Animacion_logo.HideSync(Date);
                 Panel_Menu.Visible = false;
                 Panel_Menu.Width = 60;
                 Menu_Animacion.ShowSync(Panel_Menu);
@@ -156,6 +166,17 @@ namespace Proyecto_Omb_SQL_SERVER
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Metodos.Abrir_Formulario_En_Panel(Panel_contenido,new Vistas.Vista_Inicio());
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Hora.Text = DateTime.Now.ToLongTimeString();
+            this.Date.Text = DateTime.Now.ToLongDateString();
         }
 
         private void Maximizar_Click(object sender, EventArgs e)

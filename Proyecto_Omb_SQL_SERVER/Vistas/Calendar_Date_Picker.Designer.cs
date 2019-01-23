@@ -42,7 +42,7 @@
             // 
             // DatePicker_Fecha
             // 
-            this.DatePicker_Fecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(35)))), ((int)(((byte)(126)))));
+            this.DatePicker_Fecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.DatePicker_Fecha.BorderRadius = 0;
             this.DatePicker_Fecha.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DatePicker_Fecha.ForeColor = System.Drawing.Color.White;

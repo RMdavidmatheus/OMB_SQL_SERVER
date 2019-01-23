@@ -131,7 +131,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(139, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 43);
+            this.label1.Size = new System.Drawing.Size(172, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "Bienvenido";
             // 
@@ -210,7 +210,7 @@
             this.Iniciar.IdleFillColor = System.Drawing.Color.White;
             this.Iniciar.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.Iniciar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
-            this.Iniciar.Location = new System.Drawing.Point(131, 334);
+            this.Iniciar.Location = new System.Drawing.Point(131, 330);
             this.Iniciar.Margin = new System.Windows.Forms.Padding(5);
             this.Iniciar.Name = "Iniciar";
             this.Iniciar.Size = new System.Drawing.Size(216, 59);
@@ -234,9 +234,9 @@
             this.Recuperar.AutoSize = true;
             this.Recuperar.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recuperar.LinkColor = System.Drawing.SystemColors.GrayText;
-            this.Recuperar.Location = new System.Drawing.Point(169, 398);
+            this.Recuperar.Location = new System.Drawing.Point(169, 393);
             this.Recuperar.Name = "Recuperar";
-            this.Recuperar.Size = new System.Drawing.Size(139, 18);
+            this.Recuperar.Size = new System.Drawing.Size(138, 15);
             this.Recuperar.TabIndex = 3;
             this.Recuperar.TabStop = true;
             this.Recuperar.Text = "¿Olvido su contraseña?";
@@ -315,7 +315,7 @@
             this.bunifuSeparator3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(51, 437);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(51, 444);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Size = new System.Drawing.Size(353, 10);
             this.bunifuSeparator3.TabIndex = 5;
@@ -327,7 +327,7 @@
             this.Icn_Twitter.BackColor = System.Drawing.Color.White;
             this.Icn_Twitter.Image = ((System.Drawing.Image)(resources.GetObject("Icn_Twitter.Image")));
             this.Icn_Twitter.ImageActive = null;
-            this.Icn_Twitter.Location = new System.Drawing.Point(275, 452);
+            this.Icn_Twitter.Location = new System.Drawing.Point(275, 459);
             this.Icn_Twitter.Name = "Icn_Twitter";
             this.Icn_Twitter.Size = new System.Drawing.Size(22, 22);
             this.Icn_Twitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -340,7 +340,7 @@
             this.Icn_Face.BackColor = System.Drawing.Color.White;
             this.Icn_Face.Image = ((System.Drawing.Image)(resources.GetObject("Icn_Face.Image")));
             this.Icn_Face.ImageActive = null;
-            this.Icn_Face.Location = new System.Drawing.Point(243, 452);
+            this.Icn_Face.Location = new System.Drawing.Point(243, 459);
             this.Icn_Face.Name = "Icn_Face";
             this.Icn_Face.Size = new System.Drawing.Size(22, 22);
             this.Icn_Face.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -353,7 +353,7 @@
             this.Icn_Insta.BackColor = System.Drawing.Color.White;
             this.Icn_Insta.Image = ((System.Drawing.Image)(resources.GetObject("Icn_Insta.Image")));
             this.Icn_Insta.ImageActive = null;
-            this.Icn_Insta.Location = new System.Drawing.Point(211, 452);
+            this.Icn_Insta.Location = new System.Drawing.Point(211, 459);
             this.Icn_Insta.Name = "Icn_Insta";
             this.Icn_Insta.Size = new System.Drawing.Size(22, 22);
             this.Icn_Insta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -366,7 +366,7 @@
             this.Icn_Web.BackColor = System.Drawing.Color.White;
             this.Icn_Web.Image = ((System.Drawing.Image)(resources.GetObject("Icn_Web.Image")));
             this.Icn_Web.ImageActive = null;
-            this.Icn_Web.Location = new System.Drawing.Point(179, 452);
+            this.Icn_Web.Location = new System.Drawing.Point(179, 459);
             this.Icn_Web.Name = "Icn_Web";
             this.Icn_Web.Size = new System.Drawing.Size(22, 22);
             this.Icn_Web.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

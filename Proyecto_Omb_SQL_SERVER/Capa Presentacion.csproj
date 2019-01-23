@@ -80,17 +80,41 @@
     <Compile Include="Vistas\Calendar_Date_Picker.Designer.cs">
       <DependentUpon>Calendar_Date_Picker.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Listado_Beneficiarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listado_Beneficiarios.Designer.cs">
+      <DependentUpon>Listado_Beneficiarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Listado_Polizas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Listado_Polizas.Designer.cs">
       <DependentUpon>Listado_Polizas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Listado_Tomadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listado_Tomadores.Designer.cs">
+      <DependentUpon>Listado_Tomadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listado_Vehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listado_Vehiculos.Designer.cs">
+      <DependentUpon>Listado_Vehiculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Log_In.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Log_In.Designer.cs">
       <DependentUpon>Log_In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Vista_Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Vista_Inicio.Designer.cs">
+      <DependentUpon>Vista_Inicio.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Menu_Principal.resx">
       <DependentUpon>Menu_Principal.cs</DependentUpon>
@@ -110,11 +134,23 @@
     <EmbeddedResource Include="Vistas\Calendar_Date_Picker.resx">
       <DependentUpon>Calendar_Date_Picker.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listado_Beneficiarios.resx">
+      <DependentUpon>Listado_Beneficiarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Listado_Polizas.resx">
       <DependentUpon>Listado_Polizas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listado_Tomadores.resx">
+      <DependentUpon>Listado_Tomadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listado_Vehiculos.resx">
+      <DependentUpon>Listado_Vehiculos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Log_In.resx">
       <DependentUpon>Log_In.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Vista_Inicio.resx">
+      <DependentUpon>Vista_Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

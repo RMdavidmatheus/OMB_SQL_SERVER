@@ -23,8 +23,8 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
             // COLOR
             Tema.ColorScheme = new ColorScheme(
-                Primary.Indigo800, Primary.Indigo900,
-                Primary.Indigo800, Accent.Cyan700,
+                Primary.Blue900, Primary.Blue800,
+                Primary.Teal900, Accent.Teal700,
                 TextShade.WHITE);
 
             // FORMAT DATE PICKER

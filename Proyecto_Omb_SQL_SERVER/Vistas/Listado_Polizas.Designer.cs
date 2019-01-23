@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listado_Polizas));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listado_Polizas));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Panel_Superior = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,10 +43,12 @@
             this.Añadir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.Panel_Inferior = new System.Windows.Forms.Panel();
             this.DataGrid_Listado_Polizas = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Panel_Superior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Panel_Inferior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Listado_Polizas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -56,6 +58,7 @@
             // 
             // Panel_Superior
             // 
+            this.Panel_Superior.Controls.Add(this.pictureBox2);
             this.Panel_Superior.Controls.Add(this.pictureBox1);
             this.Panel_Superior.Controls.Add(this.Buscar);
             this.Panel_Superior.Controls.Add(this.Eliminar);
@@ -64,13 +67,13 @@
             this.Panel_Superior.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Superior.Location = new System.Drawing.Point(0, 0);
             this.Panel_Superior.Name = "Panel_Superior";
-            this.Panel_Superior.Size = new System.Drawing.Size(1280, 180);
+            this.Panel_Superior.Size = new System.Drawing.Size(1280, 200);
             this.Panel_Superior.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(652, 131);
+            this.pictureBox1.Location = new System.Drawing.Point(652, 150);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -84,7 +87,7 @@
             this.Buscar.Depth = 0;
             this.Buscar.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscar.Hint = "Buscar...";
-            this.Buscar.Location = new System.Drawing.Point(686, 137);
+            this.Buscar.Location = new System.Drawing.Point(686, 156);
             this.Buscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.Buscar.Name = "Buscar";
             this.Buscar.PasswordChar = '\0';
@@ -100,7 +103,7 @@
             this.Eliminar.Depth = 0;
             this.Eliminar.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Eliminar.Location = new System.Drawing.Point(431, 121);
+            this.Eliminar.Location = new System.Drawing.Point(431, 140);
             this.Eliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Primary = true;
@@ -114,7 +117,7 @@
             this.Editar.Depth = 0;
             this.Editar.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Editar.Location = new System.Drawing.Point(221, 121);
+            this.Editar.Location = new System.Drawing.Point(221, 140);
             this.Editar.MouseState = MaterialSkin.MouseState.HOVER;
             this.Editar.Name = "Editar";
             this.Editar.Primary = true;
@@ -129,7 +132,7 @@
             this.Añadir.Depth = 0;
             this.Añadir.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Añadir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Añadir.Location = new System.Drawing.Point(11, 121);
+            this.Añadir.Location = new System.Drawing.Point(11, 140);
             this.Añadir.MouseState = MaterialSkin.MouseState.HOVER;
             this.Añadir.Name = "Añadir";
             this.Añadir.Primary = true;
@@ -143,9 +146,9 @@
             // 
             this.Panel_Inferior.Controls.Add(this.DataGrid_Listado_Polizas);
             this.Panel_Inferior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_Inferior.Location = new System.Drawing.Point(0, 180);
+            this.Panel_Inferior.Location = new System.Drawing.Point(0, 200);
             this.Panel_Inferior.Name = "Panel_Inferior";
-            this.Panel_Inferior.Size = new System.Drawing.Size(1280, 540);
+            this.Panel_Inferior.Size = new System.Drawing.Size(1280, 520);
             this.Panel_Inferior.TabIndex = 1;
             // 
             // DataGrid_Listado_Polizas
@@ -180,7 +183,7 @@
             this.DataGrid_Listado_Polizas.GridColor = System.Drawing.Color.Gainsboro;
             this.DataGrid_Listado_Polizas.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(47)))), ((int)(((byte)(107)))));
             this.DataGrid_Listado_Polizas.HeaderForeColor = System.Drawing.Color.White;
-            this.DataGrid_Listado_Polizas.Location = new System.Drawing.Point(12, 0);
+            this.DataGrid_Listado_Polizas.Location = new System.Drawing.Point(12, 6);
             this.DataGrid_Listado_Polizas.Name = "DataGrid_Listado_Polizas";
             this.DataGrid_Listado_Polizas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -191,9 +194,19 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGrid_Listado_Polizas.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.DataGrid_Listado_Polizas.Size = new System.Drawing.Size(1256, 537);
+            this.DataGrid_Listado_Polizas.Size = new System.Drawing.Size(1256, 511);
             this.DataGrid_Listado_Polizas.TabIndex = 0;
             this.DataGrid_Listado_Polizas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataGrid_Listado_Polizas_CellFormatting);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1280, 122);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // Listado_Polizas
             // 
@@ -210,6 +223,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Panel_Inferior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Listado_Polizas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,5 +239,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton Editar;
         private MaterialSkin.Controls.MaterialSingleLineTextField Buscar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

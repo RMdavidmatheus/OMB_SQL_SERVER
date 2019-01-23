@@ -23,3 +23,7 @@ C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\b
 C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Vistas.Listado_Polizas.resources
 C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Vistas.Agregar_Editar.resources
 C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Vistas.Calendar_Date_Picker.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Vistas.Vista_Inicio.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Vistas.Listado_Vehiculos.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Vistas.Listado_Tomadores.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Vistas.Listado_Beneficiarios.resources
