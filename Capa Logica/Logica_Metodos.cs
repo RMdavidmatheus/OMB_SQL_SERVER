@@ -97,6 +97,67 @@ namespace Capa_Logica
             Conexion.Desconectar();
             return Actualizado;
         }
+        // METODO PARA SUSTRAER INFORMACION DESDE LA BASE DE DATOS.. TABLA POLIZA
+        public DataTable Extraer_Pol(string Num_pol)
+        {
+            // TOMANDO DATOS CONCRETOS DE POLIZA
+            DataTable dt = new DataTable();
+            SqlCommand query = new SqlCommand("select p.Tipo_Poliza_ID , p.Aseguradora_ID, p.Pol_Valor_Prima from Poliza p where p.Pol_Numero_Poliza = '" + Num_pol + "' ", Conexion.Conectar());
+            SqlDataAdapter rs = new SqlDataAdapter(query);
+            rs.Fill(dt);
 
+
+            return dt;
+        }
+        // METODOS PARA EXTRAER INFORMACION DESDE LA BASE DE DATOS.. TABLA POLVEH
+        public DataTable Extraer_Pol_Veh(string Num_pol)
+        {
+            // TOMANDO DATOS CONCRETOS DE POLIZA DE VEHICULOS
+            DataTable dt = new DataTable();
+            SqlCommand query = new SqlCommand("select * from Polizas_Vehiculos p where p.PolVeh_Numero_Poliza = '" + Num_pol + "' ", Conexion.Conectar());
+            SqlDataAdapter rs = new SqlDataAdapter(query);
+            rs.Fill(dt);
+
+
+            return dt;
+        }
+        // METODO PARA EXTRAER INFORMACION DESDE LA BASE DE DATOS.. TABLA VEHICULO
+        public DataTable Extraer_Veh(string Placa)
+        {
+            // TOMANDO DATOS CONCRETOS DE VEHICULOS
+            DataTable dt = new DataTable();
+            SqlCommand query = new SqlCommand("select * from Vehiculo v where v.Veh_Placa = '" + Placa + "' ", Conexion.Conectar());
+            SqlDataAdapter rs = new SqlDataAdapter(query);
+            rs.Fill(dt);
+
+
+            return dt;
+        }
+        // METODO PARA EXTRAER INFORMACION DE LA TABLA TOMADOR
+        public DataTable Extraer_Tom(string DocumentoTomador)
+        {
+            //TOMANDO DATOS CONCRETOS DE TOMADOR
+
+            DataTable dt = new DataTable();
+
+            SqlCommand query = new SqlCommand("select * from Tomador tom where tom.Tom_Documento = '" + DocumentoTomador + "' ", Conexion.Conectar());
+            SqlDataAdapter rs = new SqlDataAdapter(query);
+            rs.Fill(dt);
+
+
+            return dt;
+        }
+        // METODO PARA EXTRAER INFORMACION DE LA TABLA BENEFICIARIO
+        public DataTable Extraer_Ben(string DocumentoBeneficiario)
+        {
+            // TOMANDO DATOS CONCRETOS DE BENEFICIARIO
+            DataTable dt = new DataTable();
+            SqlCommand query = new  SqlCommand("select * from Beneficiario ben where ben.Ben_Documento = '" + DocumentoBeneficiario + "' ", Conexion.Conectar());
+            SqlDataAdapter rs = new SqlDataAdapter(query);
+            rs.Fill(dt);
+
+
+            return dt;
+        }
     }
 }

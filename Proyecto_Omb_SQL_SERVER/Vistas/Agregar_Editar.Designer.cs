@@ -88,6 +88,10 @@
             this.Txt_Fasecolda = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.Txt_Placa = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.TabSelector = new MaterialSkin.Controls.MaterialTabSelector();
+            this.Act_Tom = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.Act_Ben = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.Act_Pol = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.Act_Veh = new MaterialSkin.Controls.MaterialRaisedButton();
             this.Contenido_control.SuspendLayout();
             this.Tomador_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Calendar_Tom)).BeginInit();
@@ -126,6 +130,7 @@
             // Tomador_tab
             // 
             this.Tomador_tab.BackColor = System.Drawing.Color.White;
+            this.Tomador_tab.Controls.Add(this.Act_Tom);
             this.Tomador_tab.Controls.Add(this.bunifuSeparator2);
             this.Tomador_tab.Controls.Add(this.Pb_Calendar_Tom);
             this.Tomador_tab.Controls.Add(this.Txt_Fecha_Nacimiento_Tom);
@@ -218,8 +223,8 @@
             this.Drop_Tp_Doc_Tom.Location = new System.Drawing.Point(38, 156);
             this.Drop_Tp_Doc_Tom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Drop_Tp_Doc_Tom.Name = "Drop_Tp_Doc_Tom";
-            this.Drop_Tp_Doc_Tom.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(35)))), ((int)(((byte)(126)))));
-            this.Drop_Tp_Doc_Tom.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(147)))));
+            this.Drop_Tp_Doc_Tom.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.Drop_Tp_Doc_Tom.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
             this.Drop_Tp_Doc_Tom.selectedIndex = 0;
             this.Drop_Tp_Doc_Tom.Size = new System.Drawing.Size(383, 46);
             this.Drop_Tp_Doc_Tom.TabIndex = 1;
@@ -339,6 +344,7 @@
             // Beneficiario_tab
             // 
             this.Beneficiario_tab.BackColor = System.Drawing.Color.White;
+            this.Beneficiario_tab.Controls.Add(this.Act_Ben);
             this.Beneficiario_tab.Controls.Add(this.bunifuSeparator3);
             this.Beneficiario_tab.Controls.Add(this.PB_Calendar_Ben);
             this.Beneficiario_tab.Controls.Add(this.Txt_Fecha_Nacimiento_Ben);
@@ -431,8 +437,8 @@
             this.TP_Doc_Ben.Location = new System.Drawing.Point(38, 156);
             this.TP_Doc_Ben.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TP_Doc_Ben.Name = "TP_Doc_Ben";
-            this.TP_Doc_Ben.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(35)))), ((int)(((byte)(126)))));
-            this.TP_Doc_Ben.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(147)))));
+            this.TP_Doc_Ben.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.TP_Doc_Ben.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
             this.TP_Doc_Ben.selectedIndex = 0;
             this.TP_Doc_Ben.Size = new System.Drawing.Size(383, 46);
             this.TP_Doc_Ben.TabIndex = 16;
@@ -552,6 +558,7 @@
             // Poliza_tab
             // 
             this.Poliza_tab.BackColor = System.Drawing.Color.White;
+            this.Poliza_tab.Controls.Add(this.Act_Pol);
             this.Poliza_tab.Controls.Add(this.img_Calendar_Pol_1);
             this.Poliza_tab.Controls.Add(this.Fecha_inicial);
             this.Poliza_tab.Controls.Add(this.CB_Ramo);
@@ -623,8 +630,8 @@
             this.CB_Ramo.Location = new System.Drawing.Point(38, 219);
             this.CB_Ramo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CB_Ramo.Name = "CB_Ramo";
-            this.CB_Ramo.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(35)))), ((int)(((byte)(126)))));
-            this.CB_Ramo.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(147)))));
+            this.CB_Ramo.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.CB_Ramo.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
             this.CB_Ramo.selectedIndex = 0;
             this.CB_Ramo.Size = new System.Drawing.Size(383, 46);
             this.CB_Ramo.TabIndex = 40;
@@ -712,8 +719,8 @@
             this.CB_Aseguradora.Location = new System.Drawing.Point(38, 156);
             this.CB_Aseguradora.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CB_Aseguradora.Name = "CB_Aseguradora";
-            this.CB_Aseguradora.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(35)))), ((int)(((byte)(126)))));
-            this.CB_Aseguradora.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(147)))));
+            this.CB_Aseguradora.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.CB_Aseguradora.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
             this.CB_Aseguradora.selectedIndex = 0;
             this.CB_Aseguradora.Size = new System.Drawing.Size(383, 46);
             this.CB_Aseguradora.TabIndex = 29;
@@ -775,6 +782,7 @@
             // Vehiculo_tab
             // 
             this.Vehiculo_tab.BackColor = System.Drawing.Color.White;
+            this.Vehiculo_tab.Controls.Add(this.Act_Veh);
             this.Vehiculo_tab.Controls.Add(this.Txt_Modelo);
             this.Vehiculo_tab.Controls.Add(this.pictureBox4);
             this.Vehiculo_tab.Controls.Add(this.bunifuSeparator7);
@@ -814,7 +822,7 @@
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(0, 6);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(450, 127);
+            this.pictureBox4.Size = new System.Drawing.Size(450, 143);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 40;
             this.pictureBox4.TabStop = false;
@@ -989,6 +997,58 @@
             this.TabSelector.TabIndex = 1;
             this.TabSelector.Text = "materialTabSelector1";
             // 
+            // Act_Tom
+            // 
+            this.Act_Tom.Depth = 0;
+            this.Act_Tom.Location = new System.Drawing.Point(133, 564);
+            this.Act_Tom.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Act_Tom.Name = "Act_Tom";
+            this.Act_Tom.Primary = true;
+            this.Act_Tom.Size = new System.Drawing.Size(195, 44);
+            this.Act_Tom.TabIndex = 14;
+            this.Act_Tom.Text = "actualizar";
+            this.Act_Tom.UseVisualStyleBackColor = true;
+            this.Act_Tom.Click += new System.EventHandler(this.Act_Tom_Click);
+            // 
+            // Act_Ben
+            // 
+            this.Act_Ben.Depth = 0;
+            this.Act_Ben.Location = new System.Drawing.Point(133, 564);
+            this.Act_Ben.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Act_Ben.Name = "Act_Ben";
+            this.Act_Ben.Primary = true;
+            this.Act_Ben.Size = new System.Drawing.Size(195, 44);
+            this.Act_Ben.TabIndex = 27;
+            this.Act_Ben.Text = "ACTUALIZAR";
+            this.Act_Ben.UseVisualStyleBackColor = true;
+            this.Act_Ben.Click += new System.EventHandler(this.Act_Ben_Click);
+            // 
+            // Act_Pol
+            // 
+            this.Act_Pol.Depth = 0;
+            this.Act_Pol.Location = new System.Drawing.Point(134, 527);
+            this.Act_Pol.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Act_Pol.Name = "Act_Pol";
+            this.Act_Pol.Primary = true;
+            this.Act_Pol.Size = new System.Drawing.Size(195, 44);
+            this.Act_Pol.TabIndex = 43;
+            this.Act_Pol.Text = "ACTUALIZAR";
+            this.Act_Pol.UseVisualStyleBackColor = true;
+            this.Act_Pol.Click += new System.EventHandler(this.Act_Pol_Click);
+            // 
+            // Act_Veh
+            // 
+            this.Act_Veh.Depth = 0;
+            this.Act_Veh.Location = new System.Drawing.Point(133, 562);
+            this.Act_Veh.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Act_Veh.Name = "Act_Veh";
+            this.Act_Veh.Primary = true;
+            this.Act_Veh.Size = new System.Drawing.Size(195, 44);
+            this.Act_Veh.TabIndex = 42;
+            this.Act_Veh.Text = "ACTUALIZAR";
+            this.Act_Veh.UseVisualStyleBackColor = true;
+            this.Act_Veh.Click += new System.EventHandler(this.Act_Veh_Click);
+            // 
             // Agregar_Editar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1000,6 +1060,7 @@
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar datos";
+            this.Load += new System.EventHandler(this.Agregar_Editar_Load);
             this.Contenido_control.ResumeLayout(false);
             this.Tomador_tab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Calendar_Tom)).EndInit();
@@ -1026,57 +1087,61 @@
         public System.Windows.Forms.TabPage Beneficiario_tab;
         public System.Windows.Forms.TabPage Poliza_tab;
         public System.Windows.Forms.TabPage Vehiculo_tab;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Doc_Tom;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Nom_Tom;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Ape_Tom;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Tel_Tom;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Direccion_Tom;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Email_Tom;
-        private Bunifu.Framework.UI.BunifuDropdown Drop_Tp_Doc_Tom;
-        private MaterialSkin.Controls.MaterialRaisedButton Guardar_Tom;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Fecha_Nacimiento_Tom;
         private Bunifu.Framework.UI.BunifuImageButton Pb_Calendar_Tom;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         public MaterialSkin.Controls.MaterialTabSelector TabSelector;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
         private Bunifu.Framework.UI.BunifuImageButton PB_Calendar_Ben;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Fecha_Nacimiento_Ben;
-        private MaterialSkin.Controls.MaterialRaisedButton Guardar_Ben;
-        private Bunifu.Framework.UI.BunifuDropdown TP_Doc_Ben;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Email_Ben;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator4;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Tel_Ben;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Dir_Ben;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Ape_Ben;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Nom_Ben;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Doc_Ben;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator5;
         private Bunifu.Framework.UI.BunifuImageButton img_Calendar_2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Fecha_final;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private Bunifu.Framework.UI.BunifuDropdown CB_Aseguradora;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Valor_Prima;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator6;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_No_Poliza;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Bunifu.Framework.UI.BunifuImageButton img_Calendar_Pol_1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Fecha_inicial;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator7;
         private Bunifu.Framework.UI.BunifuImageButton PB_Calendar_Soat;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Vig_Soat;
-        private MaterialSkin.Controls.MaterialRaisedButton Guardar_Veh;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Valor_Auto;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator8;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Marca;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Clase;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Servicio;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Fasecolda;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Placa;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private MaterialSkin.Controls.MaterialSingleLineTextField Txt_Modelo;
         public Bunifu.Framework.UI.BunifuDropdown CB_Ramo;
+        public MaterialSkin.Controls.MaterialRaisedButton Guardar_Tom;
+        public MaterialSkin.Controls.MaterialRaisedButton Guardar_Ben;
+        public MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        public MaterialSkin.Controls.MaterialRaisedButton Guardar_Veh;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Doc_Tom;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Nom_Tom;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Ape_Tom;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Tel_Tom;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Direccion_Tom;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Email_Tom;
+        public Bunifu.Framework.UI.BunifuDropdown Drop_Tp_Doc_Tom;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Fecha_Nacimiento_Tom;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Fecha_Nacimiento_Ben;
+        public Bunifu.Framework.UI.BunifuDropdown TP_Doc_Ben;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Email_Ben;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Tel_Ben;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Dir_Ben;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Ape_Ben;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Nom_Ben;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Doc_Ben;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Fecha_final;
+        public Bunifu.Framework.UI.BunifuDropdown CB_Aseguradora;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Valor_Prima;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_No_Poliza;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Fecha_inicial;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Vig_Soat;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Valor_Auto;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Marca;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Clase;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Servicio;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Fasecolda;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Placa;
+        public MaterialSkin.Controls.MaterialSingleLineTextField Txt_Modelo;
+        public MaterialSkin.Controls.MaterialRaisedButton Act_Tom;
+        public MaterialSkin.Controls.MaterialRaisedButton Act_Ben;
+        public MaterialSkin.Controls.MaterialRaisedButton Act_Pol;
+        public MaterialSkin.Controls.MaterialRaisedButton Act_Veh;
     }
 }

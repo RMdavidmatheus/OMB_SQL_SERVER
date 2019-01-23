@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,8 +19,16 @@ namespace Proyecto_Omb_SQL_SERVER
             Usuario_Titulo_Barra = Usuario_BD;
         }
 
+        // METODO MOVER PANTALLA
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        // FIN METODO MOVER PANTALLA
+
         // VARIABLES PRIVADAS
         private string Usuario_Titulo_Barra;
+        private int LX, LY;
 
         // INSTANCIANDO LA CLASE PARA TRAER METODOS
 
@@ -126,6 +135,39 @@ namespace Proyecto_Omb_SQL_SERVER
                 Panel_Menu.Width = 60;
                 Menu_Animacion.ShowSync(Panel_Menu);
             }
+        }
+
+        private void Minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Restaurar_Click(object sender, EventArgs e)
+        {
+            //this.WindowState = FormWindowState.Normal;
+
+            this.Size = new Size(1280, 720);
+            this.Location = new Point(LX, LY);
+            Maximizar.Visible = true;
+            Restaurar.Visible = false;
+        }
+
+        private void Panel_herramientas_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void Maximizar_Click(object sender, EventArgs e)
+        {
+            //this.WindowState = FormWindowState.Maximized;
+            LX = this.Location.X;
+            LY = this.Location.Y;
+
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            Restaurar.Visible = true;
+            Maximizar.Visible = false;
         }
     }
 }

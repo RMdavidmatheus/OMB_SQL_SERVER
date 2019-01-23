@@ -16,7 +16,7 @@ namespace Proyecto_Omb_SQL_SERVER
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vistas.Agregar_Editar());
+            Application.Run(new Vistas.Log_In());
         }
     }
 }

@@ -56,10 +56,10 @@
             this.Restaurar = new Bunifu.Framework.UI.BunifuImageButton();
             this.Panel_contenido = new System.Windows.Forms.Panel();
             this.Animacion_TXTS = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.Panel_Principal = new System.Windows.Forms.Panel();
             this.Menu_Animacion = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.Animacion_logo = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.Menu_Animacion_2 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.Panel_Principal = new System.Windows.Forms.Panel();
             this.Panel_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Panel_herramientas.SuspendLayout();
@@ -167,7 +167,7 @@
             this.btn_Reportes.Text = "Reportes";
             this.btn_Reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reportes.Textcolor = System.Drawing.Color.White;
-            this.btn_Reportes.TextFont = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reportes.TextFont = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Reportes.Click += new System.EventHandler(this.btn_Reportes_Click);
             // 
             // btn_Vehiculos
@@ -206,7 +206,7 @@
             this.btn_Vehiculos.Text = "Vehiculos";
             this.btn_Vehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Vehiculos.Textcolor = System.Drawing.Color.White;
-            this.btn_Vehiculos.TextFont = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Vehiculos.TextFont = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Vehiculos.Click += new System.EventHandler(this.btn_Vehiculos_Click);
             // 
             // btn_Beneficiarios
@@ -245,7 +245,7 @@
             this.btn_Beneficiarios.Text = "Beneficiarios";
             this.btn_Beneficiarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Beneficiarios.Textcolor = System.Drawing.Color.White;
-            this.btn_Beneficiarios.TextFont = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Beneficiarios.TextFont = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Beneficiarios.Click += new System.EventHandler(this.btn_Beneficiarios_Click);
             // 
             // btn_Tomadores
@@ -284,7 +284,7 @@
             this.btn_Tomadores.Text = "Tomadores";
             this.btn_Tomadores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Tomadores.Textcolor = System.Drawing.Color.White;
-            this.btn_Tomadores.TextFont = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Tomadores.TextFont = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tomadores.Click += new System.EventHandler(this.btn_Tomadores_Click);
             // 
             // btn_Listado_Polizas
@@ -323,7 +323,7 @@
             this.btn_Listado_Polizas.Text = "Listado de polizas";
             this.btn_Listado_Polizas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Listado_Polizas.Textcolor = System.Drawing.Color.White;
-            this.btn_Listado_Polizas.TextFont = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Listado_Polizas.TextFont = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Listado_Polizas.Click += new System.EventHandler(this.btn_Listado_Polizas_Click);
             // 
             // pictureBox2
@@ -361,6 +361,7 @@
             this.Panel_herramientas.Name = "Panel_herramientas";
             this.Panel_herramientas.Size = new System.Drawing.Size(1280, 50);
             this.Panel_herramientas.TabIndex = 1;
+            this.Panel_herramientas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_herramientas_MouseDown);
             // 
             // pictureBox1
             // 
@@ -432,14 +433,15 @@
             this.Menu_Animacion_2.SetDecoration(this.Titulo, BunifuAnimatorNS.DecorationType.None);
             this.Titulo.Font = new System.Drawing.Font("Roboto Light", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulo.ForeColor = System.Drawing.SystemColors.Control;
-            this.Titulo.Location = new System.Drawing.Point(392, 2);
+            this.Titulo.Location = new System.Drawing.Point(392, 5);
             this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(303, 46);
+            this.Titulo.Size = new System.Drawing.Size(309, 42);
             this.Titulo.TabIndex = 4;
             this.Titulo.Text = "Titulo de la ventana";
             // 
             // Minimizar
             // 
+            this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.Menu_Animacion_2.SetDecoration(this.Minimizar, BunifuAnimatorNS.DecorationType.None);
             this.Menu_Animacion.SetDecoration(this.Minimizar, BunifuAnimatorNS.DecorationType.None);
@@ -454,9 +456,11 @@
             this.Minimizar.TabIndex = 2;
             this.Minimizar.TabStop = false;
             this.Minimizar.Zoom = 10;
+            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
             // 
             // Maximizar
             // 
+            this.Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Maximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.Menu_Animacion_2.SetDecoration(this.Maximizar, BunifuAnimatorNS.DecorationType.None);
             this.Menu_Animacion.SetDecoration(this.Maximizar, BunifuAnimatorNS.DecorationType.None);
@@ -471,9 +475,11 @@
             this.Maximizar.TabIndex = 1;
             this.Maximizar.TabStop = false;
             this.Maximizar.Zoom = 10;
+            this.Maximizar.Click += new System.EventHandler(this.Maximizar_Click);
             // 
             // Cerrar
             // 
+            this.Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.Menu_Animacion_2.SetDecoration(this.Cerrar, BunifuAnimatorNS.DecorationType.None);
             this.Menu_Animacion.SetDecoration(this.Cerrar, BunifuAnimatorNS.DecorationType.None);
@@ -492,6 +498,7 @@
             // 
             // Restaurar
             // 
+            this.Restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Restaurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.Menu_Animacion_2.SetDecoration(this.Restaurar, BunifuAnimatorNS.DecorationType.None);
             this.Menu_Animacion.SetDecoration(this.Restaurar, BunifuAnimatorNS.DecorationType.None);
@@ -506,6 +513,7 @@
             this.Restaurar.TabIndex = 3;
             this.Restaurar.TabStop = false;
             this.Restaurar.Zoom = 10;
+            this.Restaurar.Click += new System.EventHandler(this.Restaurar_Click);
             // 
             // Panel_contenido
             // 
@@ -540,6 +548,20 @@
             animation2.TimeCoeff = 0F;
             animation2.TransparencyCoeff = 0F;
             this.Animacion_TXTS.DefaultAnimation = animation2;
+            // 
+            // Panel_Principal
+            // 
+            this.Panel_Principal.Controls.Add(this.Panel_contenido);
+            this.Panel_Principal.Controls.Add(this.Panel_Menu);
+            this.Menu_Animacion_2.SetDecoration(this.Panel_Principal, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_TXTS.SetDecoration(this.Panel_Principal, BunifuAnimatorNS.DecorationType.None);
+            this.Menu_Animacion.SetDecoration(this.Panel_Principal, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_logo.SetDecoration(this.Panel_Principal, BunifuAnimatorNS.DecorationType.None);
+            this.Panel_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_Principal.Location = new System.Drawing.Point(0, 50);
+            this.Panel_Principal.Name = "Panel_Principal";
+            this.Panel_Principal.Size = new System.Drawing.Size(1280, 670);
+            this.Panel_Principal.TabIndex = 2;
             // 
             // Menu_Animacion
             // 
@@ -603,20 +625,6 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.Menu_Animacion_2.DefaultAnimation = animation1;
-            // 
-            // Panel_Principal
-            // 
-            this.Panel_Principal.Controls.Add(this.Panel_contenido);
-            this.Panel_Principal.Controls.Add(this.Panel_Menu);
-            this.Menu_Animacion_2.SetDecoration(this.Panel_Principal, BunifuAnimatorNS.DecorationType.None);
-            this.Animacion_TXTS.SetDecoration(this.Panel_Principal, BunifuAnimatorNS.DecorationType.None);
-            this.Menu_Animacion.SetDecoration(this.Panel_Principal, BunifuAnimatorNS.DecorationType.None);
-            this.Animacion_logo.SetDecoration(this.Panel_Principal, BunifuAnimatorNS.DecorationType.None);
-            this.Panel_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_Principal.Location = new System.Drawing.Point(0, 50);
-            this.Panel_Principal.Name = "Panel_Principal";
-            this.Panel_Principal.Size = new System.Drawing.Size(1280, 670);
-            this.Panel_Principal.TabIndex = 2;
             // 
             // Menu_Principal
             // 
