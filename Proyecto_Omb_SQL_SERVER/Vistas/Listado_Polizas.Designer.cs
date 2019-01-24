@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listado_Polizas));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listado_Polizas));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Panel_Superior = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Buscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.Eliminar = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -43,12 +44,12 @@
             this.Añadir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.Panel_Inferior = new System.Windows.Forms.Panel();
             this.DataGrid_Listado_Polizas = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Mensaje = new System.Windows.Forms.ToolTip(this.components);
             this.Panel_Superior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Panel_Inferior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Listado_Polizas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -69,6 +70,16 @@
             this.Panel_Superior.Name = "Panel_Superior";
             this.Panel_Superior.Size = new System.Drawing.Size(1280, 200);
             this.Panel_Superior.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1280, 122);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -97,6 +108,7 @@
             this.Buscar.Size = new System.Drawing.Size(591, 23);
             this.Buscar.TabIndex = 3;
             this.Buscar.UseSystemPasswordChar = false;
+            this.Buscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Buscar_KeyUp);
             // 
             // Eliminar
             // 
@@ -111,6 +123,7 @@
             this.Eliminar.TabIndex = 2;
             this.Eliminar.Text = "Eliminar Poliza";
             this.Eliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click_1);
             // 
             // Editar
             // 
@@ -198,16 +211,6 @@
             this.DataGrid_Listado_Polizas.TabIndex = 0;
             this.DataGrid_Listado_Polizas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataGrid_Listado_Polizas_CellFormatting);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1280, 122);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // Listado_Polizas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,10 +223,10 @@
             this.Text = "Listado_Polizas";
             this.Load += new System.EventHandler(this.Listado_Polizas_Load);
             this.Panel_Superior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Panel_Inferior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Listado_Polizas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +243,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField Buscar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip Mensaje;
     }
 }

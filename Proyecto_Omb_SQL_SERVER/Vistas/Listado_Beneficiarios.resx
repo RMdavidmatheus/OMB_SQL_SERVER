@@ -121,6 +121,19 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PDF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAARpJREFUSEvt
+        1iFLQ3EUhvErIojJsFlNOpaMkxVNalKwWCai0bGkQRT7gmHrisEgiEY/hoJlmDSJYcmkC8Kes9cNUYd/
+        tt0jsj3wg/fectruov9YEqOavh1hVbNP2sOCpm9pJDR9m8Wkpm8FzGv6NoIhTd/Okdf07Rr7mr4NDrs1
+        OOyWy+EZrGm2+np4GDsYbzwFZh/0lOaP2W9yDduNJ/X5sB09wzMm7EWb5pDVVLfY1GzbEl7RPNY8bL/Z
+        l3jEb1+rE5Q1VchhaxF2/AB2+BBXeEDIJ7Ljw9YK3lDBHZ4wjZC6Omwt4x0vmLIXgXV92NpARjO4nhzu
+        pG+Hb7ClGWunKGmqY9zjImZV5NBqDLsoxmwdf/I/7aMoqgPellYc7EBEPgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="Mensaje.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>141, 17</value>
+  </metadata>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAACJMAAANZCAYAAACxve0fAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu

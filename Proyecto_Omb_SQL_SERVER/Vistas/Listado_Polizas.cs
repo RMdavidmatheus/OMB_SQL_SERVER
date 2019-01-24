@@ -55,6 +55,27 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
             Añadir.Act_Pol.Visible = false;
             Añadir.Act_Veh.Visible = false;
             Añadir.ShowDialog();
+            if (Añadir.Visible==false)
+            {
+                Metodos.LlenarTabla_Poliza(DataGrid_Listado_Polizas);
+                // ACTUALIZAR AUTOMATICAMENTE POLIZA SI ESTA ACTIVA O INACTIVA
+                string PolqueryActivo = "UPDATE Poliza SET Pol_Estado = 'ACTIVO' where Pol_Vigencia_Final >= GETDATE()";
+                Metodos.Insertar(PolqueryActivo);
+                string PolqueryInactivo = "UPDATE Poliza SET Pol_Estado = 'INACTIVO' where Pol_Vigencia_Final < GETDATE()";
+                Metodos.Insertar(PolqueryInactivo);
+                // FINALIZACION POLIZA UPDATE
+
+                //ACTUALIZAR ACTIVO O INACTIVO EN VEHICULOS
+                string SOATqueryActivo = "UPDATE Vehiculo SET Veh_Soat_Estado = 'ACTIVO' where Veh_Vigencia_Soat >= GETDATE()";
+                Metodos.Insertar(SOATqueryActivo);
+                string SOATqueryInactivo = "UPDATE Vehiculo SET Veh_Soat_Estado = 'INACTIVO' where Veh_Vigencia_Soat < GETDATE()";
+                Metodos.Insertar(SOATqueryInactivo);
+                // FIN
+            }
+            else
+            {
+                // NADA SOLO CUANDO SE CIERRA MOSTRARA LA ACTUALIZACION DE LA TABLA
+            }
         }
 
         private void Editar_Click(object sender, EventArgs e)
@@ -276,6 +297,172 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 Metodos.Insertar(SOATqueryInactivo);
                 // FIN 
             }
+        }
+
+        private void Buscar_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void Eliminar_Click_1(object sender, EventArgs e)
+        {
+            DocumentoBen = DataGrid_Listado_Polizas.CurrentRow.Cells[7].Value.ToString();
+            DocumentoTom = DataGrid_Listado_Polizas.CurrentRow.Cells[4].Value.ToString();
+            // SI ES POLIZA DE AUTOS
+            if (DataGrid_Listado_Polizas.CurrentRow.Cells[1].Value.ToString().Equals("AUTOS"))
+            {
+
+                DataTable dt5 = Metodos.Extraer_Pol_Veh(DataGrid_Listado_Polizas.CurrentRow.Cells[0].Value.ToString());
+                if (dt5.Rows.Count > 0)
+                {
+                    DataRow row = dt5.Rows[0];
+                    PlacaVeh = Convert.ToString(row["PolVeh_Veh_Placa"]);
+                }
+                //ELIMINANDO RELACION POL_VEH
+                string query = "DELETE FROM Polizas_Vehiculos WHERE  PolVeh_Numero_Poliza='" + DataGrid_Listado_Polizas.CurrentRow.Cells[0].Value.ToString() + "' AND PolVeh_Veh_Placa='" + PlacaVeh + "' ";
+                if (Metodos.Eliminar(query))
+                {
+                    MessageBox.Show("Relacion Poliza-Vehiculo Eliminada Correctamente");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+
+                }
+                else
+                {
+                    MessageBox.Show("ERROR al eliminar Relacion");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+
+                }
+                // ELIMINANDO VEHICULO
+                string queryVeh = "DELETE FROM Vehiculo WHERE Veh_Placa='" + PlacaVeh + "' ";
+                if (Metodos.Eliminar(queryVeh))
+                {
+                    MessageBox.Show("Vehiculo Eliminado Correctamente");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+
+                }
+                else
+                {
+                    MessageBox.Show("ERROR al eliminar Vehiculo");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+
+                }
+                // EXTRAYENDO DATOS QUE NO ESTAN EN EL DATAGRID, POLIZA
+                DataTable dt4 = Metodos.Extraer_Pol(DataGrid_Listado_Polizas.CurrentRow.Cells[0].Value.ToString());
+                if (dt4.Rows.Count > 0)
+                {
+                    DataRow row = dt4.Rows[0];
+                    seleccionTP = Convert.ToInt32(row["Tipo_Poliza_ID"]);
+                    seleccionAse = Convert.ToInt32(row["Aseguradora_ID"]);
+                }
+                //ELIMINANDO POLIZA
+                string querypol = "DELETE FROM Poliza WHERE  Pol_Numero_Poliza='" + DataGrid_Listado_Polizas.CurrentRow.Cells[0].Value.ToString() + "' ";
+                if (Metodos.Eliminar(querypol))
+                {
+                    MessageBox.Show("Poliza Eliminada Correctamente");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+
+
+                }
+                else
+                {
+                    MessageBox.Show("ERROR al eliminar Poliza");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+
+                }
+
+                //ELIMINANDO TOMADOR
+                string querytom = "DELETE FROM Tomador WHERE  Tom_Documento= '" + DocumentoTom + "'    ";
+                if (Metodos.Eliminar(querytom))
+                {
+                    MessageBox.Show("Tomador Eliminado Correctamente");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+                    DocumentoTom = "";
+
+                }
+                else
+                {
+                    MessageBox.Show("ERROR al eliminar Tomador");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+
+                }
+
+                //ELIMINANDO BENEFICIARIO
+                string queryben = "DELETE FROM Beneficiario WHERE  Ben_Documento= '" + DocumentoBen + "'   ";
+                if (Metodos.Eliminar(queryben))
+                {
+                    MessageBox.Show("Beneficiario Eliminado Correctamente");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+                    DocumentoBen = "";
+
+                }
+                else
+                {
+                    MessageBox.Show("ERROR al eliminar Beneficiario");
+
+                }
+                // ACTUALIZANDO TABLA
+                Metodos.LlenarTabla_Poliza(DataGrid_Listado_Polizas);
+            }
+            else
+            {
+                // EXTRAYENDO DATOS QUE NO ESTAN EN EL DATAGRID, POLIZA
+                DataTable dt4 = Metodos.Extraer_Pol(DataGrid_Listado_Polizas.CurrentRow.Cells[0].Value.ToString());
+                if (dt4.Rows.Count > 0)
+                {
+                    DataRow row = dt4.Rows[0];
+                    seleccionTP = Convert.ToInt32(row["Tipo_Poliza_ID"]);
+                    seleccionAse = Convert.ToInt32(row["Aseguradora_ID"]);
+                }
+                //ELIMINANDO POLIZA
+                string querypol = "DELETE FROM Poliza WHERE  Pol_Numero_Poliza='" + DataGrid_Listado_Polizas.CurrentRow.Cells[0].Value.ToString() + "' ";
+                if (Metodos.Eliminar(querypol))
+                {
+                    MessageBox.Show("Poliza Eliminada Correctamente");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+
+
+                }
+                else
+                {
+                    MessageBox.Show("ERROR al eliminar Poliza");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+
+                }
+
+                //ELIMINANDO TOMADOR
+                string querytom = "DELETE FROM Tomador WHERE  Tom_Documento= '" + DocumentoTom + "'    ";
+                if (Metodos.Eliminar(querytom))
+                {
+                    MessageBox.Show("Tomador Eliminado Correctamente");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+                    DocumentoTom = "";
+
+                }
+                else
+                {
+                    MessageBox.Show("ERROR al eliminar Tomador");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+
+                }
+
+                //ELIMINANDO BENEFICIARIO
+                string queryben = "DELETE FROM Beneficiario WHERE  Ben_Documento= '" + DocumentoBen + "'   ";
+                if (Metodos.Eliminar(queryben))
+                {
+                    MessageBox.Show("Beneficiario Eliminado Correctamente");
+                    //Metodos.LlenarTabla_Poliza(Listado);
+
+                    DocumentoBen = "";
+                }
+                else
+                {
+                    MessageBox.Show("ERROR al eliminar Beneficiario");
+
+                }
+                // ACTUALIZANDO TABLA
+                Metodos.LlenarTabla_Poliza(DataGrid_Listado_Polizas);
+            }
+
         }
 
         private void DataGrid_Listado_Polizas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

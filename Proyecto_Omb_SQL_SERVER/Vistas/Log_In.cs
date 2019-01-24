@@ -112,11 +112,11 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 if (Usuario_txt.Text.Equals(UsuarioBD) || Pass_txt.Text.Equals(ContraseñaBD))
                 {
                     TomarUsu = UsuarioBD;
-                    Menu_Principal Menu = new Menu_Principal(TomarUsu);
+                    Loading_Form Cargando = new Loading_Form(TomarUsu);
+                    Cargando.Show();
+                    //Menu_Principal Menu = new Menu_Principal(TomarUsu);
+                    //Menu.Show();
                     ContraseñaBD = "";
-                    Menu.Show();
-                    //OMB_Base_de_datos.Frames.Cargando bar = new OMB_Base_de_datos.Frames.Cargando(TomarUsu);
-                    //bar.Show();
                     this.Hide();
                     UsuarioBD = "";
                     ContraseñaBD = "";

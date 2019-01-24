@@ -148,6 +148,28 @@ namespace Capa_Logica
             Conexion.Desconectar();
             return Actualizado;
         }
+        // METODO PARA ELIMINAR
+        public bool Eliminar(string query)
+        {
+            bool Eliminado = false;
+            try
+            {
+                int registros = 0;
+                SqlCommand sentencia = new SqlCommand(query, Conexion.Conectar());
+                registros = sentencia.ExecuteNonQuery();
+                if (registros > 0)
+                {
+                    Eliminado = true;
+                }
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Conexion.Desconectar();
+            return Eliminado;
+        }
         // METODO PARA SUSTRAER INFORMACION DESDE LA BASE DE DATOS.. TABLA POLIZA
         public DataTable Extraer_Pol(string Num_pol)
         {
