@@ -104,6 +104,40 @@ namespace Capa_Logica
             }
             Conexion.Desconectar();
         }
+        // METODO PARA LLENAR DATAGRID REPORTE SOAT
+        public void LlenarTabla_SOAT(DataGridView Llenar)
+        {
+            try
+            {
+                SqlCommand query = new SqlCommand("SELECT* from Vista_reporte_soat", Conexion.Conectar());
+                SqlDataAdapter rs = new SqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                rs.Fill(dt);
+                Llenar.DataSource = dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Conexion.Desconectar();
+        }
+        // METODO PARA LLENAR DATAGRID REPORTE VIGENCIAS
+        public void LlenarTabla_Vigencia(DataGridView Llenar)
+        {
+            try
+            {
+                SqlCommand query = new SqlCommand("SELECT* from Vista_reporte_vigencias", Conexion.Conectar());
+                SqlDataAdapter rs = new SqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                rs.Fill(dt);
+                Llenar.DataSource = dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Conexion.Desconectar();
+        }
         // METODO PARA INSERT
         public bool Insertar(string query)
         {
@@ -232,12 +266,80 @@ namespace Capa_Logica
 
             return dt;
         }
-        // BUSCAR POLIZA
+        // METODO PARA BUSCAR POLIZA
         public void Buscar_Poliza(DataGridView Llenar, string TextoBusqueda)
         {
             try
             {
                 SqlCommand query = new SqlCommand("select * from Vista_Listado_Polizas vi where vi.[Numero de Poliza] LIKE '" + TextoBusqueda + "%' or vi.[Documento Tomador] LIKE '" + TextoBusqueda + "%' or vi.[Documento Beneficiario] LIKE '" + TextoBusqueda + "%' OR vi.[Nombres Tomador] LIKE '" + TextoBusqueda + "%' OR vi.[Nombres Beneficiario] LIKE '" + TextoBusqueda + "%'", Conexion.Desconectar());
+                SqlDataAdapter rs = new SqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                rs.Fill(dt);
+                Llenar.DataSource = dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Conexion.Desconectar();
+        }
+        // METODO PARA BUSCAR TOMADOR
+        public void Buscar_Tom(DataGridView Llenar, string TextoBusqueda)
+        {
+            try
+            {
+                SqlCommand query = new SqlCommand("SELECT * FROM Vista_Tomador t WHERE t.Documento LIKE '" + TextoBusqueda + "%' OR t.Nombres LIKE '" + TextoBusqueda + "%' OR t.Email LIKE '" + TextoBusqueda + "%' ", Conexion.Conectar());
+                SqlDataAdapter rs = new SqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                rs.Fill(dt);
+                Llenar.DataSource = dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Conexion.Desconectar();
+        }
+        // METODO PARA BUSCAR BENEFICIARIO
+        public void Buscar_Ben(DataGridView Llenar, string TextoBusqueda)
+        {
+            try
+            {
+                SqlCommand query = new SqlCommand("SELECT * FROM Vista_Beneficiario b WHERE b.Documento LIKE '" + TextoBusqueda + "%' OR b.Nombres LIKE '" + TextoBusqueda + "%' OR b.Email LIKE '" + TextoBusqueda + "%'  ", Conexion.Conectar());
+                SqlDataAdapter rs = new SqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                rs.Fill(dt);
+                Llenar.DataSource = dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Conexion.Desconectar();
+        }
+        // METODO PARA BUSCAR VEHICULO
+        public void Buscar_Vehiculo(DataGridView Llenar, string TextoBusqueda)
+        {
+            try
+            {
+                SqlCommand query = new SqlCommand("SELECT * FROM Vista_Vehiculos v WHERE v.Placa LIKE '" + TextoBusqueda + "%' OR v.[Numero de Poliza] LIKE '" + TextoBusqueda + "%' OR v.[Documento Tomador] LIKE '" + TextoBusqueda + "%'", Conexion.Conectar());
+                SqlDataAdapter rs = new SqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                rs.Fill(dt);
+                Llenar.DataSource = dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Conexion.Desconectar();
+        }
+        // METODO PARA BUSCAR EN REPORTE
+        public void Reporte_SOAT_Buscar(DataGridView Llenar, string TextoBusqueda)
+        {
+            try
+            {
+                SqlCommand query = new SqlCommand("select * from vigencia_soat_mes vs where vs.Placa LIKE '" + TextoBusqueda + "%' OR vs.`N.Poliza` LIKE '" + TextoBusqueda + "%' OR vs.`Documento Tomador`LIKE '" + TextoBusqueda + "%' OR vs.`Nombres Tomador` LIKE '" + TextoBusqueda + "%' ", Conexion.Conectar());
                 SqlDataAdapter rs = new SqlDataAdapter(query);
                 DataTable dt = new DataTable();
                 rs.Fill(dt);

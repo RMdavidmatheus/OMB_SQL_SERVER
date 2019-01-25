@@ -106,5 +106,10 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 stream.Close();
             }
         }
+
+        private void Buscar_KeyUp(object sender, KeyEventArgs e)
+        {
+            Metodos.Buscar_Ben(DataGrid_Listado_Ben,Buscar.Text);
+        }
     }
 }

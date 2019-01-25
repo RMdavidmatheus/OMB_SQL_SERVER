@@ -124,6 +124,7 @@
             this.Buscar.TabIndex = 7;
             this.Mensaje.SetToolTip(this.Buscar, "Buscar");
             this.Buscar.UseSystemPasswordChar = false;
+            this.Buscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Buscar_KeyUp);
             // 
             // pictureBox2
             // 

@@ -13,37 +13,20 @@ using System.Windows.Forms;
 
 namespace Proyecto_Omb_SQL_SERVER.Vistas
 {
-    public partial class Listado_Reporte_Vig_Pol : Form
+    public partial class Listado_reporte_SOAT : Form
     {
-        public Listado_Reporte_Vig_Pol()
+        public Listado_reporte_SOAT()
         {
             InitializeComponent();
-            DataGrid_Listado_Vig_Pol.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DataGrid_Listado_Vig_SOAT.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-        // INSTANCIANDO METODO PARA EL DATAGRID
+
+        // INSTANCIANDO METODOS
         Capa_Logica.Logica_Metodos Metodos = new Capa_Logica.Logica_Metodos();
 
-        private void Listado_Reporte_Vig_Pol_Load(object sender, EventArgs e)
+        private void DataGrid_Listado_Vig_SOAT_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            Metodos.LlenarTabla_Vigencia(DataGrid_Listado_Vig_Pol);
-            // ACTUALIZAR AUTOMATICAMENTE POLIZA SI ESTA ACTIVA O INACTIVA
-            string PolqueryActivo = "UPDATE Poliza SET Pol_Estado = 'ACTIVO' where Pol_Vigencia_Final >= GETDATE()";
-            Metodos.Insertar(PolqueryActivo);
-            string PolqueryInactivo = "UPDATE Poliza SET Pol_Estado = 'INACTIVO' where Pol_Vigencia_Final < GETDATE()";
-            Metodos.Insertar(PolqueryInactivo);
-            // FINALIZACION POLIZA UPDATE
-
-            //ACTUALIZAR ACTIVO O INACTIVO EN VEHICULOS
-            string SOATqueryActivo = "UPDATE Vehiculo SET Veh_Soat_Estado = 'ACTIVO' where Veh_Vigencia_Soat >= GETDATE()";
-            Metodos.Insertar(SOATqueryActivo);
-            string SOATqueryInactivo = "UPDATE Vehiculo SET Veh_Soat_Estado = 'INACTIVO' where Veh_Vigencia_Soat < GETDATE()";
-            Metodos.Insertar(SOATqueryInactivo);
-            // FIN 
-        }
-
-        private void DataGrid_Listado_Vig_Pol_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.DataGrid_Listado_Vig_Pol.Columns[e.ColumnIndex].Name == "Estado de la poliza")
+            if (this.DataGrid_Listado_Vig_SOAT.Columns[e.ColumnIndex].Name == "Estado SOAT")
             {
                 try
                 {
@@ -71,13 +54,31 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
             }
         }
 
+        private void Listado_reporte_SOAT_Load(object sender, EventArgs e)
+        {
+            Metodos.LlenarTabla_SOAT(DataGrid_Listado_Vig_SOAT);
+            // ACTUALIZAR AUTOMATICAMENTE POLIZA SI ESTA ACTIVA O INACTIVA
+            string PolqueryActivo = "UPDATE Poliza SET Pol_Estado = 'ACTIVO' where Pol_Vigencia_Final >= GETDATE()";
+            Metodos.Insertar(PolqueryActivo);
+            string PolqueryInactivo = "UPDATE Poliza SET Pol_Estado = 'INACTIVO' where Pol_Vigencia_Final < GETDATE()";
+            Metodos.Insertar(PolqueryInactivo);
+            // FINALIZACION POLIZA UPDATE
+
+            //ACTUALIZAR ACTIVO O INACTIVO EN VEHICULOS
+            string SOATqueryActivo = "UPDATE Vehiculo SET Veh_Soat_Estado = 'ACTIVO' where Veh_Vigencia_Soat >= GETDATE()";
+            Metodos.Insertar(SOATqueryActivo);
+            string SOATqueryInactivo = "UPDATE Vehiculo SET Veh_Soat_Estado = 'INACTIVO' where Veh_Vigencia_Soat < GETDATE()";
+            Metodos.Insertar(SOATqueryInactivo);
+            // FIN 
+        }
+
         private void PDF_Click(object sender, EventArgs e)
         {
             iTextSharp.text.Image Logo = iTextSharp.text.Image.GetInstance("C:\\Users\\David PC\\Pictures\\Logo.png");
             iTextSharp.text.Font palatino = FontFactory.GetFont("MS GOTHIC", 15, iTextSharp.text.Font.BOLD);
             palatino.SetColor(246, 246, 246);
             //CREANDO EL ARCHIVO CON ITEXTSHARP
-            PdfPTable pdfTable = new PdfPTable(DataGrid_Listado_Vig_Pol.ColumnCount);
+            PdfPTable pdfTable = new PdfPTable(DataGrid_Listado_Vig_SOAT.ColumnCount);
             pdfTable.DefaultCell.Padding = 3;
             pdfTable.DefaultCell.BackgroundColor = new iTextSharp.text.BaseColor(224, 224, 224);
             pdfTable.WidthPercentage = 100;
@@ -85,7 +86,7 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
             pdfTable.DefaultCell.BorderWidth = 1;
 
             //AÑADIENDO EL HEADER DE LA COLUMNA
-            foreach (DataGridViewColumn column in DataGrid_Listado_Vig_Pol.Columns)
+            foreach (DataGridViewColumn column in DataGrid_Listado_Vig_SOAT.Columns)
             {
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, palatino));
                 cell.BackgroundColor = new iTextSharp.text.BaseColor(31, 48, 76);
@@ -93,7 +94,7 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
             }
 
             //AÑADIENDO LOS REGISTROS
-            foreach (DataGridViewRow row in DataGrid_Listado_Vig_Pol.Rows)
+            foreach (DataGridViewRow row in DataGrid_Listado_Vig_SOAT.Rows)
             {
                 try
                 {
@@ -117,7 +118,7 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
             //EXPORTANDO A PDF
             SaveFileDialog save = new SaveFileDialog();
-            save.FileName = "Reporte Vigencia Polizas";
+            save.FileName = "Reporte Vigencia SOATS";
             save.Filter = "PDF (*.pdf)|*.pdf";
             if (save.ShowDialog() == DialogResult.OK)
             {
@@ -127,8 +128,8 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 PdfWriter.GetInstance(pdfDoc, stream);
                 pdfDoc.Open();
                 pdfDoc.Add(Logo);
-                pdfDoc.AddTitle("REPORTE VIGENCIA POLIZAS");
-                pdfDoc.Add(new Paragraph("REPORTE VIGENCIA POLIZAS", FontFactory.GetFont("MS GOTHIC", 30, iTextSharp.text.Font.BOLD)));
+                pdfDoc.AddTitle("REPORTE VIGENCIA SOATS");
+                pdfDoc.Add(new Paragraph("REPORTE VIGENCIA SOATS", FontFactory.GetFont("MS GOTHIC", 30, iTextSharp.text.Font.BOLD)));
                 pdfDoc.Add(new Paragraph("                          "));
                 pdfDoc.Add(pdfTable);
                 pdfDoc.Add(new Paragraph("FECHA REPORTE: ", FontFactory.GetFont("ARIAL", 9, iTextSharp.text.Font.UNDERLINE)));
@@ -136,31 +137,6 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 pdfDoc.Close();
                 stream.Close();
             }
-        }
-
-        private void PictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Buscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGrid_Listado_Vig_Pol_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Panel_Superior_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -31,3 +31,4 @@ C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\o
 C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Debug\itextsharp.dll
 C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Debug\itextsharp.xml
 C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Vistas.Listado_Reporte_Vig_Pol.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Vistas.Listado_reporte_SOAT.resources

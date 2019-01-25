@@ -36,6 +36,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Principal));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Panel_Menu = new System.Windows.Forms.Panel();
+            this.Vigencia_SOAT = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Date = new System.Windows.Forms.Label();
             this.Hora = new System.Windows.Forms.Label();
             this.Menu_Boton = new Bunifu.Framework.UI.BunifuImageButton();
@@ -64,7 +65,6 @@
             this.Animacion_logo = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.Menu_Animacion_2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Vigencia_SOAT = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Panel_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Menu_Boton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -107,6 +107,45 @@
             this.Panel_Menu.Name = "Panel_Menu";
             this.Panel_Menu.Size = new System.Drawing.Size(300, 717);
             this.Panel_Menu.TabIndex = 0;
+            // 
+            // Vigencia_SOAT
+            // 
+            this.Vigencia_SOAT.Activecolor = System.Drawing.SystemColors.MenuHighlight;
+            this.Vigencia_SOAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.Vigencia_SOAT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Vigencia_SOAT.BorderRadius = 0;
+            this.Vigencia_SOAT.ButtonText = "Vigencia SOATS";
+            this.Vigencia_SOAT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Animacion_logo.SetDecoration(this.Vigencia_SOAT, BunifuAnimatorNS.DecorationType.None);
+            this.Menu_Animacion.SetDecoration(this.Vigencia_SOAT, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_TXTS.SetDecoration(this.Vigencia_SOAT, BunifuAnimatorNS.DecorationType.None);
+            this.Menu_Animacion_2.SetDecoration(this.Vigencia_SOAT, BunifuAnimatorNS.DecorationType.None);
+            this.Vigencia_SOAT.DisabledColor = System.Drawing.Color.Gray;
+            this.Vigencia_SOAT.Iconcolor = System.Drawing.Color.Transparent;
+            this.Vigencia_SOAT.Iconimage = ((System.Drawing.Image)(resources.GetObject("Vigencia_SOAT.Iconimage")));
+            this.Vigencia_SOAT.Iconimage_right = null;
+            this.Vigencia_SOAT.Iconimage_right_Selected = null;
+            this.Vigencia_SOAT.Iconimage_Selected = null;
+            this.Vigencia_SOAT.IconMarginLeft = 0;
+            this.Vigencia_SOAT.IconMarginRight = 0;
+            this.Vigencia_SOAT.IconRightVisible = true;
+            this.Vigencia_SOAT.IconRightZoom = 0D;
+            this.Vigencia_SOAT.IconVisible = true;
+            this.Vigencia_SOAT.IconZoom = 90D;
+            this.Vigencia_SOAT.IsTab = false;
+            this.Vigencia_SOAT.Location = new System.Drawing.Point(0, 564);
+            this.Vigencia_SOAT.Name = "Vigencia_SOAT";
+            this.Vigencia_SOAT.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.Vigencia_SOAT.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.Vigencia_SOAT.OnHoverTextColor = System.Drawing.Color.White;
+            this.Vigencia_SOAT.selected = false;
+            this.Vigencia_SOAT.Size = new System.Drawing.Size(306, 62);
+            this.Vigencia_SOAT.TabIndex = 11;
+            this.Vigencia_SOAT.Text = "Vigencia SOATS";
+            this.Vigencia_SOAT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Vigencia_SOAT.Textcolor = System.Drawing.Color.White;
+            this.Vigencia_SOAT.TextFont = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Vigencia_SOAT.Click += new System.EventHandler(this.Vigencia_SOAT_Click);
             // 
             // Date
             // 
@@ -692,44 +731,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // Vigencia_SOAT
-            // 
-            this.Vigencia_SOAT.Activecolor = System.Drawing.SystemColors.MenuHighlight;
-            this.Vigencia_SOAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
-            this.Vigencia_SOAT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Vigencia_SOAT.BorderRadius = 0;
-            this.Vigencia_SOAT.ButtonText = "Vigencia SOATS";
-            this.Vigencia_SOAT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Animacion_logo.SetDecoration(this.Vigencia_SOAT, BunifuAnimatorNS.DecorationType.None);
-            this.Menu_Animacion.SetDecoration(this.Vigencia_SOAT, BunifuAnimatorNS.DecorationType.None);
-            this.Animacion_TXTS.SetDecoration(this.Vigencia_SOAT, BunifuAnimatorNS.DecorationType.None);
-            this.Menu_Animacion_2.SetDecoration(this.Vigencia_SOAT, BunifuAnimatorNS.DecorationType.None);
-            this.Vigencia_SOAT.DisabledColor = System.Drawing.Color.Gray;
-            this.Vigencia_SOAT.Iconcolor = System.Drawing.Color.Transparent;
-            this.Vigencia_SOAT.Iconimage = ((System.Drawing.Image)(resources.GetObject("Vigencia_SOAT.Iconimage")));
-            this.Vigencia_SOAT.Iconimage_right = null;
-            this.Vigencia_SOAT.Iconimage_right_Selected = null;
-            this.Vigencia_SOAT.Iconimage_Selected = null;
-            this.Vigencia_SOAT.IconMarginLeft = 0;
-            this.Vigencia_SOAT.IconMarginRight = 0;
-            this.Vigencia_SOAT.IconRightVisible = true;
-            this.Vigencia_SOAT.IconRightZoom = 0D;
-            this.Vigencia_SOAT.IconVisible = true;
-            this.Vigencia_SOAT.IconZoom = 90D;
-            this.Vigencia_SOAT.IsTab = false;
-            this.Vigencia_SOAT.Location = new System.Drawing.Point(0, 564);
-            this.Vigencia_SOAT.Name = "Vigencia_SOAT";
-            this.Vigencia_SOAT.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
-            this.Vigencia_SOAT.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.Vigencia_SOAT.OnHoverTextColor = System.Drawing.Color.White;
-            this.Vigencia_SOAT.selected = false;
-            this.Vigencia_SOAT.Size = new System.Drawing.Size(306, 62);
-            this.Vigencia_SOAT.TabIndex = 11;
-            this.Vigencia_SOAT.Text = "Vigencia SOATS";
-            this.Vigencia_SOAT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Vigencia_SOAT.Textcolor = System.Drawing.Color.White;
-            this.Vigencia_SOAT.TextFont = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // Menu_Principal
             // 

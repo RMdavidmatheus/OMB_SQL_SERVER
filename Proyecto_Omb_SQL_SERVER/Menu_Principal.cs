@@ -122,7 +122,7 @@ namespace Proyecto_Omb_SQL_SERVER
             // MOSTRANDO ANIMACION DE LOS TITULOS
             Animacion_TXTS.ShowSync(Arrow);
             Animacion_TXTS.ShowSync(Titulo);
-            //Metodos.Abrir_Formulario_En_Panel(Panel_contenido,new Vistas.Pagina_Reportes());
+            Metodos.Abrir_Formulario_En_Panel(Panel_contenido, new Vistas.Listado_Reporte_Vig_Pol());
         }
 
         private void Menu_Boton_Click(object sender, EventArgs e)
@@ -183,6 +183,11 @@ namespace Proyecto_Omb_SQL_SERVER
         private void BunifuSeparator2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Vigencia_SOAT_Click(object sender, EventArgs e)
+        {
+            Metodos.Abrir_Formulario_En_Panel(Panel_contenido,new Vistas.Listado_reporte_SOAT());
         }
 
         private void Maximizar_Click(object sender, EventArgs e)

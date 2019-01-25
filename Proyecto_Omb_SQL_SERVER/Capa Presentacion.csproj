@@ -95,6 +95,12 @@
     <Compile Include="Vistas\Listado_Polizas.Designer.cs">
       <DependentUpon>Listado_Polizas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Listado_reporte_SOAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listado_reporte_SOAT.Designer.cs">
+      <DependentUpon>Listado_reporte_SOAT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Listado_Reporte_Vig_Pol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Listado_Polizas.resx">
       <DependentUpon>Listado_Polizas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listado_reporte_SOAT.resx">
+      <DependentUpon>Listado_reporte_SOAT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Listado_Reporte_Vig_Pol.resx">
       <DependentUpon>Listado_Reporte_Vig_Pol.cs</DependentUpon>
