@@ -118,10 +118,11 @@ namespace Proyecto_Omb_SQL_SERVER
             Animacion_TXTS.HideSync(Arrow);
             Animacion_TXTS.HideSync(Titulo);
             // TOMANDO TEXTO DEL BOTON
-            Titulo.Text = btn_Reportes.Text;
+            Titulo.Text = btn_Reportes_Pol.Text;
             // MOSTRANDO ANIMACION DE LOS TITULOS
             Animacion_TXTS.ShowSync(Arrow);
             Animacion_TXTS.ShowSync(Titulo);
+            //Metodos.Abrir_Formulario_En_Panel(Panel_contenido,new Vistas.Pagina_Reportes());
         }
 
         private void Menu_Boton_Click(object sender, EventArgs e)
@@ -177,6 +178,11 @@ namespace Proyecto_Omb_SQL_SERVER
         {
             this.Hora.Text = DateTime.Now.ToLongTimeString();
             this.Date.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void BunifuSeparator2_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void Maximizar_Click(object sender, EventArgs e)

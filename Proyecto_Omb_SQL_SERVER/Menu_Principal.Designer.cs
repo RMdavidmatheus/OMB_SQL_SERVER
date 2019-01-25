@@ -41,7 +41,7 @@
             this.Menu_Boton = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.btn_Reportes = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Reportes_Pol = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Vehiculos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Beneficiarios = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Tomadores = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -64,6 +64,7 @@
             this.Animacion_logo = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.Menu_Animacion_2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Vigencia_SOAT = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Panel_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Menu_Boton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,12 +86,13 @@
             // Panel_Menu
             // 
             this.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.Panel_Menu.Controls.Add(this.Vigencia_SOAT);
             this.Panel_Menu.Controls.Add(this.Date);
             this.Panel_Menu.Controls.Add(this.Hora);
             this.Panel_Menu.Controls.Add(this.Menu_Boton);
             this.Panel_Menu.Controls.Add(this.bunifuSeparator2);
             this.Panel_Menu.Controls.Add(this.bunifuSeparator1);
-            this.Panel_Menu.Controls.Add(this.btn_Reportes);
+            this.Panel_Menu.Controls.Add(this.btn_Reportes_Pol);
             this.Panel_Menu.Controls.Add(this.btn_Vehiculos);
             this.Panel_Menu.Controls.Add(this.btn_Beneficiarios);
             this.Panel_Menu.Controls.Add(this.btn_Tomadores);
@@ -103,7 +105,7 @@
             this.Panel_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_Menu.Location = new System.Drawing.Point(0, 0);
             this.Panel_Menu.Name = "Panel_Menu";
-            this.Panel_Menu.Size = new System.Drawing.Size(300, 670);
+            this.Panel_Menu.Size = new System.Drawing.Size(300, 717);
             this.Panel_Menu.TabIndex = 0;
             // 
             // Date
@@ -117,7 +119,7 @@
             this.Menu_Animacion_2.SetDecoration(this.Date, BunifuAnimatorNS.DecorationType.None);
             this.Date.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date.ForeColor = System.Drawing.SystemColors.Control;
-            this.Date.Location = new System.Drawing.Point(19, 639);
+            this.Date.Location = new System.Drawing.Point(19, 686);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(264, 23);
             this.Date.TabIndex = 10;
@@ -134,7 +136,7 @@
             this.Menu_Animacion_2.SetDecoration(this.Hora, BunifuAnimatorNS.DecorationType.None);
             this.Hora.Font = new System.Drawing.Font("Roboto Light", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hora.ForeColor = System.Drawing.SystemColors.Control;
-            this.Hora.Location = new System.Drawing.Point(66, 604);
+            this.Hora.Location = new System.Drawing.Point(66, 651);
             this.Hora.Name = "Hora";
             this.Hora.Size = new System.Drawing.Size(160, 35);
             this.Hora.TabIndex = 9;
@@ -168,12 +170,13 @@
             this.Animacion_logo.SetDecoration(this.bunifuSeparator2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(12, 558);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(12, 632);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(274, 16);
             this.bunifuSeparator2.TabIndex = 8;
             this.bunifuSeparator2.Transparency = 15;
             this.bunifuSeparator2.Vertical = false;
+            this.bunifuSeparator2.Load += new System.EventHandler(this.BunifuSeparator2_Load);
             // 
             // bunifuSeparator1
             // 
@@ -191,44 +194,44 @@
             this.bunifuSeparator1.Transparency = 15;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // btn_Reportes
+            // btn_Reportes_Pol
             // 
-            this.btn_Reportes.Activecolor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_Reportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
-            this.btn_Reportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Reportes.BorderRadius = 0;
-            this.btn_Reportes.ButtonText = "Reportes";
-            this.btn_Reportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Animacion_logo.SetDecoration(this.btn_Reportes, BunifuAnimatorNS.DecorationType.None);
-            this.Menu_Animacion.SetDecoration(this.btn_Reportes, BunifuAnimatorNS.DecorationType.None);
-            this.Animacion_TXTS.SetDecoration(this.btn_Reportes, BunifuAnimatorNS.DecorationType.None);
-            this.Menu_Animacion_2.SetDecoration(this.btn_Reportes, BunifuAnimatorNS.DecorationType.None);
-            this.btn_Reportes.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Reportes.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Reportes.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Reportes.Iconimage")));
-            this.btn_Reportes.Iconimage_right = null;
-            this.btn_Reportes.Iconimage_right_Selected = null;
-            this.btn_Reportes.Iconimage_Selected = null;
-            this.btn_Reportes.IconMarginLeft = 0;
-            this.btn_Reportes.IconMarginRight = 0;
-            this.btn_Reportes.IconRightVisible = true;
-            this.btn_Reportes.IconRightZoom = 0D;
-            this.btn_Reportes.IconVisible = true;
-            this.btn_Reportes.IconZoom = 90D;
-            this.btn_Reportes.IsTab = false;
-            this.btn_Reportes.Location = new System.Drawing.Point(0, 488);
-            this.btn_Reportes.Name = "btn_Reportes";
-            this.btn_Reportes.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
-            this.btn_Reportes.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_Reportes.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Reportes.selected = false;
-            this.btn_Reportes.Size = new System.Drawing.Size(306, 64);
-            this.btn_Reportes.TabIndex = 6;
-            this.btn_Reportes.Text = "Reportes";
-            this.btn_Reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Reportes.Textcolor = System.Drawing.Color.White;
-            this.btn_Reportes.TextFont = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reportes.Click += new System.EventHandler(this.btn_Reportes_Click);
+            this.btn_Reportes_Pol.Activecolor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_Reportes_Pol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.btn_Reportes_Pol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Reportes_Pol.BorderRadius = 0;
+            this.btn_Reportes_Pol.ButtonText = "Vigencia polizas";
+            this.btn_Reportes_Pol.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Animacion_logo.SetDecoration(this.btn_Reportes_Pol, BunifuAnimatorNS.DecorationType.None);
+            this.Menu_Animacion.SetDecoration(this.btn_Reportes_Pol, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_TXTS.SetDecoration(this.btn_Reportes_Pol, BunifuAnimatorNS.DecorationType.None);
+            this.Menu_Animacion_2.SetDecoration(this.btn_Reportes_Pol, BunifuAnimatorNS.DecorationType.None);
+            this.btn_Reportes_Pol.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Reportes_Pol.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Reportes_Pol.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Reportes_Pol.Iconimage")));
+            this.btn_Reportes_Pol.Iconimage_right = null;
+            this.btn_Reportes_Pol.Iconimage_right_Selected = null;
+            this.btn_Reportes_Pol.Iconimage_Selected = null;
+            this.btn_Reportes_Pol.IconMarginLeft = 0;
+            this.btn_Reportes_Pol.IconMarginRight = 0;
+            this.btn_Reportes_Pol.IconRightVisible = true;
+            this.btn_Reportes_Pol.IconRightZoom = 0D;
+            this.btn_Reportes_Pol.IconVisible = true;
+            this.btn_Reportes_Pol.IconZoom = 90D;
+            this.btn_Reportes_Pol.IsTab = false;
+            this.btn_Reportes_Pol.Location = new System.Drawing.Point(0, 488);
+            this.btn_Reportes_Pol.Name = "btn_Reportes_Pol";
+            this.btn_Reportes_Pol.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.btn_Reportes_Pol.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_Reportes_Pol.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Reportes_Pol.selected = false;
+            this.btn_Reportes_Pol.Size = new System.Drawing.Size(306, 62);
+            this.btn_Reportes_Pol.TabIndex = 6;
+            this.btn_Reportes_Pol.Text = "Vigencia polizas";
+            this.btn_Reportes_Pol.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Reportes_Pol.Textcolor = System.Drawing.Color.White;
+            this.btn_Reportes_Pol.TextFont = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reportes_Pol.Click += new System.EventHandler(this.btn_Reportes_Click);
             // 
             // btn_Vehiculos
             // 
@@ -261,7 +264,7 @@
             this.btn_Vehiculos.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Vehiculos.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Vehiculos.selected = false;
-            this.btn_Vehiculos.Size = new System.Drawing.Size(306, 64);
+            this.btn_Vehiculos.Size = new System.Drawing.Size(306, 62);
             this.btn_Vehiculos.TabIndex = 5;
             this.btn_Vehiculos.Text = "Vehiculos";
             this.btn_Vehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -300,7 +303,7 @@
             this.btn_Beneficiarios.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Beneficiarios.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Beneficiarios.selected = false;
-            this.btn_Beneficiarios.Size = new System.Drawing.Size(306, 64);
+            this.btn_Beneficiarios.Size = new System.Drawing.Size(306, 62);
             this.btn_Beneficiarios.TabIndex = 4;
             this.btn_Beneficiarios.Text = "Beneficiarios";
             this.btn_Beneficiarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -339,7 +342,7 @@
             this.btn_Tomadores.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Tomadores.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Tomadores.selected = false;
-            this.btn_Tomadores.Size = new System.Drawing.Size(306, 64);
+            this.btn_Tomadores.Size = new System.Drawing.Size(306, 62);
             this.btn_Tomadores.TabIndex = 3;
             this.btn_Tomadores.Text = "Tomadores";
             this.btn_Tomadores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -378,7 +381,7 @@
             this.btn_Listado_Polizas.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Listado_Polizas.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Listado_Polizas.selected = false;
-            this.btn_Listado_Polizas.Size = new System.Drawing.Size(306, 64);
+            this.btn_Listado_Polizas.Size = new System.Drawing.Size(306, 62);
             this.btn_Listado_Polizas.TabIndex = 2;
             this.btn_Listado_Polizas.Text = "Listado de polizas";
             this.btn_Listado_Polizas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -584,7 +587,7 @@
             this.Panel_contenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_contenido.Location = new System.Drawing.Point(300, 0);
             this.Panel_contenido.Name = "Panel_contenido";
-            this.Panel_contenido.Size = new System.Drawing.Size(980, 670);
+            this.Panel_contenido.Size = new System.Drawing.Size(980, 717);
             this.Panel_contenido.TabIndex = 2;
             // 
             // Animacion_TXTS
@@ -619,7 +622,7 @@
             this.Panel_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_Principal.Location = new System.Drawing.Point(0, 50);
             this.Panel_Principal.Name = "Panel_Principal";
-            this.Panel_Principal.Size = new System.Drawing.Size(1280, 670);
+            this.Panel_Principal.Size = new System.Drawing.Size(1280, 717);
             this.Panel_Principal.TabIndex = 2;
             // 
             // Menu_Animacion
@@ -690,11 +693,49 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // Vigencia_SOAT
+            // 
+            this.Vigencia_SOAT.Activecolor = System.Drawing.SystemColors.MenuHighlight;
+            this.Vigencia_SOAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.Vigencia_SOAT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Vigencia_SOAT.BorderRadius = 0;
+            this.Vigencia_SOAT.ButtonText = "Vigencia SOATS";
+            this.Vigencia_SOAT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Animacion_logo.SetDecoration(this.Vigencia_SOAT, BunifuAnimatorNS.DecorationType.None);
+            this.Menu_Animacion.SetDecoration(this.Vigencia_SOAT, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_TXTS.SetDecoration(this.Vigencia_SOAT, BunifuAnimatorNS.DecorationType.None);
+            this.Menu_Animacion_2.SetDecoration(this.Vigencia_SOAT, BunifuAnimatorNS.DecorationType.None);
+            this.Vigencia_SOAT.DisabledColor = System.Drawing.Color.Gray;
+            this.Vigencia_SOAT.Iconcolor = System.Drawing.Color.Transparent;
+            this.Vigencia_SOAT.Iconimage = ((System.Drawing.Image)(resources.GetObject("Vigencia_SOAT.Iconimage")));
+            this.Vigencia_SOAT.Iconimage_right = null;
+            this.Vigencia_SOAT.Iconimage_right_Selected = null;
+            this.Vigencia_SOAT.Iconimage_Selected = null;
+            this.Vigencia_SOAT.IconMarginLeft = 0;
+            this.Vigencia_SOAT.IconMarginRight = 0;
+            this.Vigencia_SOAT.IconRightVisible = true;
+            this.Vigencia_SOAT.IconRightZoom = 0D;
+            this.Vigencia_SOAT.IconVisible = true;
+            this.Vigencia_SOAT.IconZoom = 90D;
+            this.Vigencia_SOAT.IsTab = false;
+            this.Vigencia_SOAT.Location = new System.Drawing.Point(0, 564);
+            this.Vigencia_SOAT.Name = "Vigencia_SOAT";
+            this.Vigencia_SOAT.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.Vigencia_SOAT.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.Vigencia_SOAT.OnHoverTextColor = System.Drawing.Color.White;
+            this.Vigencia_SOAT.selected = false;
+            this.Vigencia_SOAT.Size = new System.Drawing.Size(306, 62);
+            this.Vigencia_SOAT.TabIndex = 11;
+            this.Vigencia_SOAT.Text = "Vigencia SOATS";
+            this.Vigencia_SOAT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Vigencia_SOAT.Textcolor = System.Drawing.Color.White;
+            this.Vigencia_SOAT.TextFont = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1280, 767);
             this.Controls.Add(this.Panel_Principal);
             this.Controls.Add(this.Panel_herramientas);
             this.Menu_Animacion.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
@@ -735,7 +776,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_Listado_Polizas;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Beneficiarios;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Vehiculos;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Reportes;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Reportes_Pol;
         private Bunifu.Framework.UI.BunifuImageButton Cerrar;
         private Bunifu.Framework.UI.BunifuImageButton Maximizar;
         private Bunifu.Framework.UI.BunifuImageButton Minimizar;
@@ -756,6 +797,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label Date;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
+        private Bunifu.Framework.UI.BunifuFlatButton Vigencia_SOAT;
     }
 }
 

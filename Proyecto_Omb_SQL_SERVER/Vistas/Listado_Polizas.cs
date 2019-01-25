@@ -301,7 +301,7 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
         private void Buscar_KeyUp(object sender, KeyEventArgs e)
         {
-
+            Metodos.Buscar_Poliza(DataGrid_Listado_Polizas,Buscar.Text);
         }
 
         private void Eliminar_Click_1(object sender, EventArgs e)

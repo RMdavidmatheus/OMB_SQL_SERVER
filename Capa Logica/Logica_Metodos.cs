@@ -232,5 +232,22 @@ namespace Capa_Logica
 
             return dt;
         }
+        // BUSCAR POLIZA
+        public void Buscar_Poliza(DataGridView Llenar, string TextoBusqueda)
+        {
+            try
+            {
+                SqlCommand query = new SqlCommand("select * from Vista_Listado_Polizas vi where vi.[Numero de Poliza] LIKE '" + TextoBusqueda + "%' or vi.[Documento Tomador] LIKE '" + TextoBusqueda + "%' or vi.[Documento Beneficiario] LIKE '" + TextoBusqueda + "%' OR vi.[Nombres Tomador] LIKE '" + TextoBusqueda + "%' OR vi.[Nombres Beneficiario] LIKE '" + TextoBusqueda + "%'", Conexion.Desconectar());
+                SqlDataAdapter rs = new SqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                rs.Fill(dt);
+                Llenar.DataSource = dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Conexion.Desconectar();
+        }
     }
 }
