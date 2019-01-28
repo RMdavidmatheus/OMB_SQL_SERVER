@@ -119,6 +119,7 @@
             this.Buscar.Size = new System.Drawing.Size(1164, 23);
             this.Buscar.TabIndex = 3;
             this.Buscar.UseSystemPasswordChar = false;
+            this.Buscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Buscar_KeyUp);
             // 
             // DataGrid_Listado_Vig_SOAT
             // 

@@ -162,7 +162,7 @@
             this.Usuario_txt.Depth = 0;
             this.Usuario_txt.Font = new System.Drawing.Font("Roboto Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuario_txt.Hint = "Usuario...";
-            this.Usuario_txt.Location = new System.Drawing.Point(69, 235);
+            this.Usuario_txt.Location = new System.Drawing.Point(69, 257);
             this.Usuario_txt.MouseState = MaterialSkin.MouseState.HOVER;
             this.Usuario_txt.Name = "Usuario_txt";
             this.Usuario_txt.PasswordChar = '\0';
@@ -181,7 +181,7 @@
             this.Pass_txt.Depth = 0;
             this.Pass_txt.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pass_txt.Hint = "Contraseña...";
-            this.Pass_txt.Location = new System.Drawing.Point(69, 292);
+            this.Pass_txt.Location = new System.Drawing.Point(69, 314);
             this.Pass_txt.MouseState = MaterialSkin.MouseState.HOVER;
             this.Pass_txt.Name = "Pass_txt";
             this.Pass_txt.PasswordChar = '\0';
@@ -210,7 +210,7 @@
             this.Iniciar.IdleFillColor = System.Drawing.Color.White;
             this.Iniciar.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.Iniciar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
-            this.Iniciar.Location = new System.Drawing.Point(131, 330);
+            this.Iniciar.Location = new System.Drawing.Point(131, 352);
             this.Iniciar.Margin = new System.Windows.Forms.Padding(5);
             this.Iniciar.Name = "Iniciar";
             this.Iniciar.Size = new System.Drawing.Size(216, 59);
@@ -223,7 +223,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 45);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(453, 170);
+            this.pictureBox1.Size = new System.Drawing.Size(453, 186);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -234,7 +234,7 @@
             this.Recuperar.AutoSize = true;
             this.Recuperar.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recuperar.LinkColor = System.Drawing.SystemColors.GrayText;
-            this.Recuperar.Location = new System.Drawing.Point(169, 393);
+            this.Recuperar.Location = new System.Drawing.Point(169, 415);
             this.Recuperar.Name = "Recuperar";
             this.Recuperar.Size = new System.Drawing.Size(138, 15);
             this.Recuperar.TabIndex = 3;
@@ -271,7 +271,7 @@
             // 
             this.Error_Pass.AutoSize = true;
             this.Error_Pass.ForeColor = System.Drawing.Color.Red;
-            this.Error_Pass.Location = new System.Drawing.Point(66, 317);
+            this.Error_Pass.Location = new System.Drawing.Point(66, 339);
             this.Error_Pass.Name = "Error_Pass";
             this.Error_Pass.Size = new System.Drawing.Size(212, 13);
             this.Error_Pass.TabIndex = 5;
@@ -282,7 +282,7 @@
             // 
             this.Error_Usu.AutoSize = true;
             this.Error_Usu.ForeColor = System.Drawing.Color.Red;
-            this.Error_Usu.Location = new System.Drawing.Point(66, 260);
+            this.Error_Usu.Location = new System.Drawing.Point(66, 282);
             this.Error_Usu.Name = "Error_Usu";
             this.Error_Usu.Size = new System.Drawing.Size(193, 13);
             this.Error_Usu.TabIndex = 4;
@@ -292,7 +292,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(33, 292);
+            this.pictureBox4.Location = new System.Drawing.Point(33, 314);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 23);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -302,7 +302,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(33, 235);
+            this.pictureBox3.Location = new System.Drawing.Point(33, 257);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 23);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -139,7 +139,8 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
         private void Recuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // PROGRESO...
+            Vistas.Vista_Recuperar_Pass Rec = new Vista_Recuperar_Pass();
+            Rec.ShowDialog();
         }
     }
 }

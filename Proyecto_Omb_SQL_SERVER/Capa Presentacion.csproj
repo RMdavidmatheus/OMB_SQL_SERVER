@@ -137,6 +137,12 @@
     <Compile Include="Vistas\Vista_Inicio.Designer.cs">
       <DependentUpon>Vista_Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Vista_Recuperar_Pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Vista_Recuperar_Pass.Designer.cs">
+      <DependentUpon>Vista_Recuperar_Pass.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Menu_Principal.resx">
       <DependentUpon>Menu_Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Vista_Inicio.resx">
       <DependentUpon>Vista_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Vista_Recuperar_Pass.resx">
+      <DependentUpon>Vista_Recuperar_Pass.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

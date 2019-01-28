@@ -106,5 +106,10 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 stream.Close();
             }
         }
+
+        private void Buscar_KeyUp(object sender, KeyEventArgs e)
+        {
+            Metodos.Buscar_Vehiculo(DataGrid_Listado_Veh,Buscar.Text);
+        }
     }
 }

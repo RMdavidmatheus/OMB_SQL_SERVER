@@ -39,9 +39,9 @@ namespace Capa_LogIn
             if (dt.Rows.Count > 0)
             {
                 DataRow row = dt.Rows[0];
-                Email = Convert.ToString(row["Email"]);
-                nombres = Convert.ToString(row["Usuario"]);
-                contrasena = Convert.ToString(row["Contrasena"]);
+                Email = Convert.ToString(row["Email_Usuario"]);
+                nombres = Convert.ToString(row["Nombre_Usuario"]);
+                contrasena = Convert.ToString(row["Contraseña_Usuario"]);
                 //ENVIANDO EMAIL
                 EnviarEmail();
                 mensaje = "Estimad@ " + nombres + " , se envio su contraseña al correo: " + Email + " , verifique su bandeja de entrada";

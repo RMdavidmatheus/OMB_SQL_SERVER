@@ -134,6 +134,7 @@
             this.Mensaje.SetToolTip(this.Buscar, "Buscar");
             this.Buscar.UseSystemPasswordChar = false;
             this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
+            this.Buscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Buscar_KeyUp);
             // 
             // Panel_Superior
             // 

@@ -1,5 +1,7 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
+using MaterialSkin;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +15,21 @@ using System.Windows.Forms;
 
 namespace Proyecto_Omb_SQL_SERVER.Vistas
 {
-    public partial class Listado_reporte_SOAT : Form
+    public partial class Listado_reporte_SOAT : MaterialForm
     {
         public Listado_reporte_SOAT()
         {
             InitializeComponent();
+            MaterialSkinManager Tema = MaterialSkinManager.Instance;
+            Tema.AddFormToManage(this);
+            Tema.Theme = MaterialSkinManager.Themes.LIGHT;
+
+            // COLOR
+            Tema.ColorScheme = new ColorScheme(
+                Primary.Blue900, Primary.Blue900,
+                Primary.Blue900, Accent.Blue400,
+                TextShade.WHITE);
+            // .....
             DataGrid_Listado_Vig_SOAT.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
@@ -137,6 +149,11 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 pdfDoc.Close();
                 stream.Close();
             }
+        }
+
+        private void Buscar_KeyUp(object sender, KeyEventArgs e)
+        {
+            Metodos.Reporte_SOAT_Buscar(DataGrid_Listado_Vig_SOAT,Buscar.Text);
         }
     }
 }

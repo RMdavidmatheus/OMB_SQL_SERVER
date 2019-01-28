@@ -1,5 +1,7 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
+using MaterialSkin;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +15,21 @@ using System.Windows.Forms;
 
 namespace Proyecto_Omb_SQL_SERVER.Vistas
 {
-    public partial class Listado_Reporte_Vig_Pol : Form
+    public partial class Listado_Reporte_Vig_Pol : MaterialForm
     {
         public Listado_Reporte_Vig_Pol()
         {
             InitializeComponent();
+            MaterialSkinManager Tema = MaterialSkinManager.Instance;
+            Tema.AddFormToManage(this);
+            Tema.Theme = MaterialSkinManager.Themes.LIGHT;
+
+            // COLOR
+            Tema.ColorScheme = new ColorScheme(
+                Primary.Blue900, Primary.Blue900,
+                Primary.Blue900, Accent.Blue400,
+                TextShade.WHITE);
+            //.....
             DataGrid_Listado_Vig_Pol.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         // INSTANCIANDO METODO PARA EL DATAGRID
@@ -161,6 +173,11 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Buscar_KeyUp(object sender, KeyEventArgs e)
+        {
+            Metodos.Reporte_Vigencia_Poliza_Buscar(DataGrid_Listado_Vig_Pol,Buscar.Text);
         }
     }
 }

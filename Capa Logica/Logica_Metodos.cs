@@ -351,5 +351,22 @@ namespace Capa_Logica
             }
             Conexion.Desconectar();
         }
+        // METODO PARA BUSCAR VIG POLIZA
+        public void Reporte_Vigencia_Poliza_Buscar(DataGridView Llenar, string TextoBusqueda)
+        {
+            try
+            {
+                SqlCommand query = new SqlCommand("SELECT * FROM Vista_reporte_vigencias vpa WHERE vpa.[Nombres Tomador] LIKE '" + TextoBusqueda + "%' OR vpa.[Numero de poliza] LIKE '" + TextoBusqueda + "%' OR vpa.Documento LIKE '" + TextoBusqueda + "%' AND vpa.[Estado de la poliza]='ACTIVO'", Conexion.Conectar());
+                SqlDataAdapter rs = new SqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                rs.Fill(dt);
+                Llenar.DataSource = dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Conexion.Desconectar();
+        }
     }
 }
