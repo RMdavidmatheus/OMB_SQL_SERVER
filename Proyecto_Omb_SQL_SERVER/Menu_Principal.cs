@@ -187,6 +187,14 @@ namespace Proyecto_Omb_SQL_SERVER
 
         private void Vigencia_SOAT_Click(object sender, EventArgs e)
         {
+            // OCULTANDO TITULOS
+            Animacion_TXTS.HideSync(Arrow);
+            Animacion_TXTS.HideSync(Titulo);
+            // TOMANDO TEXTO DEL BOTON
+            Titulo.Text = Vigencia_SOAT.Text;
+            // MOSTRANDO ANIMACION DE LOS TITULOS
+            Animacion_TXTS.ShowSync(Arrow);
+            Animacion_TXTS.ShowSync(Titulo);
             Metodos.Abrir_Formulario_En_Panel(Panel_contenido,new Vistas.Listado_reporte_SOAT());
         }
 

@@ -10,7 +10,7 @@ namespace Capa_Logica
 {
     class Conexion
     {
-        private SqlConnection Conexion_base = new SqlConnection("Server=(local);Database= OMB_Seguros; Integrated Security = true");
+        private SqlConnection Conexion_base = new SqlConnection("Data Source=sql5035.site4now.net;Initial Catalog=DB_A44CDA_OMBSeguros;User ID=DB_A44CDA_OMBSeguros_admin;Password=DAVIDALE98");
         
         // METODOS PARA CONECTAR Y DESCONECTAR LA BASE
 

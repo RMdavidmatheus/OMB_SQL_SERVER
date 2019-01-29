@@ -27,8 +27,8 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
             {
                 timer1.Stop();
                 Menu_Principal Menu = new Menu_Principal(Usu);
+                Animacion_form.ShowSync(Menu);
                 this.Hide();
-                Menu.Show();
                 MessageBox.Show("Bienvenido a nuestro aplicativo " + Usu, "INGRESO EXITOSO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

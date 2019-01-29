@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Log_In));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Panel_left = new System.Windows.Forms.Panel();
@@ -56,6 +58,8 @@
             this.Minimizar = new Bunifu.Framework.UI.BunifuImageButton();
             this.Cerrrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.Tiempo_Slider = new System.Windows.Forms.Timer(this.components);
+            this.Animacion_form = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.Animacion_hide = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.Panel_left.SuspendLayout();
             this.Panel_Imagen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Slider)).BeginInit();
@@ -82,6 +86,8 @@
             this.Panel_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.Panel_left.Controls.Add(this.Panel_Imagen);
             this.Panel_left.Controls.Add(this.pictureBox2);
+            this.Animacion_hide.SetDecoration(this.Panel_left, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.Panel_left, BunifuAnimatorNS.DecorationType.None);
             this.Panel_left.Location = new System.Drawing.Point(0, 23);
             this.Panel_left.Name = "Panel_left";
             this.Panel_left.Size = new System.Drawing.Size(446, 475);
@@ -93,6 +99,8 @@
             this.Panel_Imagen.Controls.Add(this.bunifuSeparator1);
             this.Panel_Imagen.Controls.Add(this.label1);
             this.Panel_Imagen.Controls.Add(this.Slider);
+            this.Animacion_hide.SetDecoration(this.Panel_Imagen, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.Panel_Imagen, BunifuAnimatorNS.DecorationType.None);
             this.Panel_Imagen.Location = new System.Drawing.Point(3, 127);
             this.Panel_Imagen.Name = "Panel_Imagen";
             this.Panel_Imagen.Size = new System.Drawing.Size(433, 345);
@@ -101,6 +109,8 @@
             // bunifuSeparator2
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.Animacion_hide.SetDecoration(this.bunifuSeparator2, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.bunifuSeparator2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuSeparator2.ForeColor = System.Drawing.SystemColors.Control;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.bunifuSeparator2.LineThickness = 1;
@@ -114,6 +124,8 @@
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.Animacion_hide.SetDecoration(this.bunifuSeparator1, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.bunifuSeparator1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuSeparator1.ForeColor = System.Drawing.SystemColors.Control;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.bunifuSeparator1.LineThickness = 1;
@@ -127,6 +139,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.Animacion_form.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_hide.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(139, 26);
@@ -137,6 +151,8 @@
             // 
             // Slider
             // 
+            this.Animacion_form.SetDecoration(this.Slider, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_hide.SetDecoration(this.Slider, BunifuAnimatorNS.DecorationType.None);
             this.Slider.Image = ((System.Drawing.Image)(resources.GetObject("Slider.Image")));
             this.Slider.Location = new System.Drawing.Point(3, 76);
             this.Slider.Name = "Slider";
@@ -147,6 +163,8 @@
             // 
             // pictureBox2
             // 
+            this.Animacion_form.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_hide.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(1, 14);
             this.pictureBox2.Name = "pictureBox2";
@@ -159,6 +177,8 @@
             // 
             this.Usuario_txt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Animacion_hide.SetDecoration(this.Usuario_txt, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.Usuario_txt, BunifuAnimatorNS.DecorationType.None);
             this.Usuario_txt.Depth = 0;
             this.Usuario_txt.Font = new System.Drawing.Font("Roboto Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuario_txt.Hint = "Usuario...";
@@ -178,6 +198,8 @@
             // 
             this.Pass_txt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Animacion_hide.SetDecoration(this.Pass_txt, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.Pass_txt, BunifuAnimatorNS.DecorationType.None);
             this.Pass_txt.Depth = 0;
             this.Pass_txt.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pass_txt.Hint = "Contraseña...";
@@ -203,6 +225,8 @@
             this.Iniciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Iniciar.BackgroundImage")));
             this.Iniciar.ButtonText = "Iniciar Sesión";
             this.Iniciar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Animacion_hide.SetDecoration(this.Iniciar, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.Iniciar, BunifuAnimatorNS.DecorationType.None);
             this.Iniciar.Font = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Iniciar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.Iniciar.IdleBorderThickness = 1;
@@ -210,7 +234,7 @@
             this.Iniciar.IdleFillColor = System.Drawing.Color.White;
             this.Iniciar.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.Iniciar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
-            this.Iniciar.Location = new System.Drawing.Point(131, 352);
+            this.Iniciar.Location = new System.Drawing.Point(131, 362);
             this.Iniciar.Margin = new System.Windows.Forms.Padding(5);
             this.Iniciar.Name = "Iniciar";
             this.Iniciar.Size = new System.Drawing.Size(216, 59);
@@ -220,6 +244,8 @@
             // 
             // pictureBox1
             // 
+            this.Animacion_form.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_hide.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 45);
             this.pictureBox1.Name = "pictureBox1";
@@ -232,9 +258,11 @@
             // 
             this.Recuperar.ActiveLinkColor = System.Drawing.Color.Gray;
             this.Recuperar.AutoSize = true;
+            this.Animacion_form.SetDecoration(this.Recuperar, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_hide.SetDecoration(this.Recuperar, BunifuAnimatorNS.DecorationType.None);
             this.Recuperar.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recuperar.LinkColor = System.Drawing.SystemColors.GrayText;
-            this.Recuperar.Location = new System.Drawing.Point(169, 415);
+            this.Recuperar.Location = new System.Drawing.Point(169, 424);
             this.Recuperar.Name = "Recuperar";
             this.Recuperar.Size = new System.Drawing.Size(138, 15);
             this.Recuperar.TabIndex = 3;
@@ -261,6 +289,8 @@
             this.Panel_Derecha.Controls.Add(this.Recuperar);
             this.Panel_Derecha.Controls.Add(this.Pass_txt);
             this.Panel_Derecha.Controls.Add(this.Iniciar);
+            this.Animacion_hide.SetDecoration(this.Panel_Derecha, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.Panel_Derecha, BunifuAnimatorNS.DecorationType.None);
             this.Panel_Derecha.Location = new System.Drawing.Point(442, -1);
             this.Panel_Derecha.Name = "Panel_Derecha";
             this.Panel_Derecha.Size = new System.Drawing.Size(456, 499);
@@ -270,6 +300,8 @@
             // Error_Pass
             // 
             this.Error_Pass.AutoSize = true;
+            this.Animacion_form.SetDecoration(this.Error_Pass, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_hide.SetDecoration(this.Error_Pass, BunifuAnimatorNS.DecorationType.None);
             this.Error_Pass.ForeColor = System.Drawing.Color.Red;
             this.Error_Pass.Location = new System.Drawing.Point(66, 339);
             this.Error_Pass.Name = "Error_Pass";
@@ -281,6 +313,8 @@
             // Error_Usu
             // 
             this.Error_Usu.AutoSize = true;
+            this.Animacion_form.SetDecoration(this.Error_Usu, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_hide.SetDecoration(this.Error_Usu, BunifuAnimatorNS.DecorationType.None);
             this.Error_Usu.ForeColor = System.Drawing.Color.Red;
             this.Error_Usu.Location = new System.Drawing.Point(66, 282);
             this.Error_Usu.Name = "Error_Usu";
@@ -291,6 +325,8 @@
             // 
             // pictureBox4
             // 
+            this.Animacion_form.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_hide.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(33, 314);
             this.pictureBox4.Name = "pictureBox4";
@@ -301,6 +337,8 @@
             // 
             // pictureBox3
             // 
+            this.Animacion_form.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_hide.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(33, 257);
             this.pictureBox3.Name = "pictureBox3";
@@ -312,10 +350,12 @@
             // bunifuSeparator3
             // 
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
+            this.Animacion_hide.SetDecoration(this.bunifuSeparator3, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.bunifuSeparator3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuSeparator3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(51, 444);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(51, 446);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Size = new System.Drawing.Size(353, 10);
             this.bunifuSeparator3.TabIndex = 5;
@@ -325,9 +365,11 @@
             // Icn_Twitter
             // 
             this.Icn_Twitter.BackColor = System.Drawing.Color.White;
+            this.Animacion_hide.SetDecoration(this.Icn_Twitter, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.Icn_Twitter, BunifuAnimatorNS.DecorationType.None);
             this.Icn_Twitter.Image = ((System.Drawing.Image)(resources.GetObject("Icn_Twitter.Image")));
             this.Icn_Twitter.ImageActive = null;
-            this.Icn_Twitter.Location = new System.Drawing.Point(275, 459);
+            this.Icn_Twitter.Location = new System.Drawing.Point(275, 461);
             this.Icn_Twitter.Name = "Icn_Twitter";
             this.Icn_Twitter.Size = new System.Drawing.Size(22, 22);
             this.Icn_Twitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -338,9 +380,11 @@
             // Icn_Face
             // 
             this.Icn_Face.BackColor = System.Drawing.Color.White;
+            this.Animacion_hide.SetDecoration(this.Icn_Face, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.Icn_Face, BunifuAnimatorNS.DecorationType.None);
             this.Icn_Face.Image = ((System.Drawing.Image)(resources.GetObject("Icn_Face.Image")));
             this.Icn_Face.ImageActive = null;
-            this.Icn_Face.Location = new System.Drawing.Point(243, 459);
+            this.Icn_Face.Location = new System.Drawing.Point(243, 461);
             this.Icn_Face.Name = "Icn_Face";
             this.Icn_Face.Size = new System.Drawing.Size(22, 22);
             this.Icn_Face.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -351,9 +395,11 @@
             // Icn_Insta
             // 
             this.Icn_Insta.BackColor = System.Drawing.Color.White;
+            this.Animacion_hide.SetDecoration(this.Icn_Insta, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.Icn_Insta, BunifuAnimatorNS.DecorationType.None);
             this.Icn_Insta.Image = ((System.Drawing.Image)(resources.GetObject("Icn_Insta.Image")));
             this.Icn_Insta.ImageActive = null;
-            this.Icn_Insta.Location = new System.Drawing.Point(211, 459);
+            this.Icn_Insta.Location = new System.Drawing.Point(211, 461);
             this.Icn_Insta.Name = "Icn_Insta";
             this.Icn_Insta.Size = new System.Drawing.Size(22, 22);
             this.Icn_Insta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -364,9 +410,11 @@
             // Icn_Web
             // 
             this.Icn_Web.BackColor = System.Drawing.Color.White;
+            this.Animacion_hide.SetDecoration(this.Icn_Web, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.Icn_Web, BunifuAnimatorNS.DecorationType.None);
             this.Icn_Web.Image = ((System.Drawing.Image)(resources.GetObject("Icn_Web.Image")));
             this.Icn_Web.ImageActive = null;
-            this.Icn_Web.Location = new System.Drawing.Point(179, 459);
+            this.Icn_Web.Location = new System.Drawing.Point(179, 461);
             this.Icn_Web.Name = "Icn_Web";
             this.Icn_Web.Size = new System.Drawing.Size(22, 22);
             this.Icn_Web.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -377,6 +425,8 @@
             // Minimizar
             // 
             this.Minimizar.BackColor = System.Drawing.Color.White;
+            this.Animacion_hide.SetDecoration(this.Minimizar, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.Minimizar, BunifuAnimatorNS.DecorationType.None);
             this.Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Minimizar.Image")));
             this.Minimizar.ImageActive = null;
             this.Minimizar.Location = new System.Drawing.Point(372, 5);
@@ -391,6 +441,8 @@
             // Cerrrar
             // 
             this.Cerrrar.BackColor = System.Drawing.Color.White;
+            this.Animacion_hide.SetDecoration(this.Cerrrar, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_form.SetDecoration(this.Cerrrar, BunifuAnimatorNS.DecorationType.None);
             this.Cerrrar.Image = ((System.Drawing.Image)(resources.GetObject("Cerrrar.Image")));
             this.Cerrrar.ImageActive = null;
             this.Cerrrar.Location = new System.Drawing.Point(412, 5);
@@ -408,6 +460,48 @@
             this.Tiempo_Slider.Interval = 2000;
             this.Tiempo_Slider.Tick += new System.EventHandler(this.Tiempo_Slider_Tick);
             // 
+            // Animacion_form
+            // 
+            this.Animacion_form.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
+            this.Animacion_form.Cursor = null;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 1F;
+            this.Animacion_form.DefaultAnimation = animation4;
+            // 
+            // Animacion_hide
+            // 
+            this.Animacion_hide.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
+            this.Animacion_hide.Cursor = null;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 1F;
+            this.Animacion_hide.DefaultAnimation = animation3;
+            // 
             // Log_In
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,6 +510,8 @@
             this.ControlBox = false;
             this.Controls.Add(this.Panel_Derecha);
             this.Controls.Add(this.Panel_left);
+            this.Animacion_form.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.Animacion_hide.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.Name = "Log_In";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -468,5 +564,7 @@
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
         private System.Windows.Forms.Label Error_Usu;
         private System.Windows.Forms.Label Error_Pass;
+        private BunifuAnimatorNS.BunifuTransition Animacion_form;
+        private BunifuAnimatorNS.BunifuTransition Animacion_hide;
     }
 }

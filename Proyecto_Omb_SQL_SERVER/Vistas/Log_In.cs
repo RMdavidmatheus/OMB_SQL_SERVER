@@ -113,9 +113,8 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 {
                     TomarUsu = UsuarioBD;
                     Loading_Form Cargando = new Loading_Form(TomarUsu);
-                    Cargando.Show();
-                    //Menu_Principal Menu = new Menu_Principal(TomarUsu);
-                    //Menu.Show();
+                    Animacion_form.ShowSync(Cargando);
+
                     ContraseñaBD = "";
                     this.Hide();
                     UsuarioBD = "";
