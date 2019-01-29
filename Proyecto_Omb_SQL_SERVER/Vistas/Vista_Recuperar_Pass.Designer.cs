@@ -88,6 +88,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_Enviar);
             this.Controls.Add(this.Txt_Doc);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Vista_Recuperar_Pass";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

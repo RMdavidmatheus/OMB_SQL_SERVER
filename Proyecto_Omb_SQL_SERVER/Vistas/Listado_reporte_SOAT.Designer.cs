@@ -185,7 +185,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.Panel_Superior);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listado_reporte_SOAT";
             this.Text = "Listado_reporte_SOAT";
             this.Load += new System.EventHandler(this.Listado_reporte_SOAT_Load);

@@ -194,6 +194,7 @@
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.Panel_Superior);
             this.Controls.Add(this.Panel_Inferior);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listado_Vehiculos";
             this.Text = "Listado_Vehiculos";
             this.Load += new System.EventHandler(this.Listado_Vehiculos_Load);

@@ -73,6 +73,7 @@
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.Content);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Vista_Inicio";
             this.Text = "Vista_Inicio";
             this.Load += new System.EventHandler(this.Vista_Inicio_Load);

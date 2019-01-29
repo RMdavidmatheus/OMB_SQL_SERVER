@@ -33,3 +33,4 @@ C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\b
 C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Vistas.Listado_Reporte_Vig_Pol.resources
 C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Vistas.Listado_reporte_SOAT.resources
 C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Vistas.Vista_Recuperar_Pass.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Debug\Proyecto_Omb_SQL_SERVER.Alert.Alert.resources

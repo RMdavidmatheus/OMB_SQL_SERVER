@@ -199,7 +199,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Panel_Superior);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listado_Reporte_Vig_Pol";
             this.Text = "Listado_Reporte_Vig_Pol";
             this.Load += new System.EventHandler(this.Listado_Reporte_Vig_Pol_Load);

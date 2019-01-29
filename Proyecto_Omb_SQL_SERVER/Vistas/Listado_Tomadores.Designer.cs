@@ -204,6 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.Panel_Inferior);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listado_Tomadores";
             this.Text = "Listado_Tomadores";
             this.Load += new System.EventHandler(this.Listado_Tomadores_Load);

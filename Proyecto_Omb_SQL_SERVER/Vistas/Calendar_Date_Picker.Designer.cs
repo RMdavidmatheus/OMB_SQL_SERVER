@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calendar_Date_Picker));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.DatePicker_Fecha = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -88,6 +89,7 @@
             this.Controls.Add(this.Guardar_Date);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DatePicker_Fecha);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Calendar_Date_Picker";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

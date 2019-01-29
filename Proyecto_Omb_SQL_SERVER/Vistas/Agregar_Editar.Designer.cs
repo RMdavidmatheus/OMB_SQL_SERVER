@@ -1093,6 +1093,7 @@
             this.ClientSize = new System.Drawing.Size(459, 760);
             this.Controls.Add(this.TabSelector);
             this.Controls.Add(this.Contenido_control);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Agregar_Editar";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
