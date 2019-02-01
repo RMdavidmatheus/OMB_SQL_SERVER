@@ -56,7 +56,7 @@
             this.Progress.MaxValue = 100;
             this.Progress.Name = "Progress";
             this.Progress.ProgressBackColor = System.Drawing.Color.White;
-            this.Progress.ProgressColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Progress.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.Progress.Size = new System.Drawing.Size(201, 201);
             this.Progress.TabIndex = 0;
             this.Progress.Value = 0;
@@ -71,7 +71,7 @@
             this.label1.AutoSize = true;
             this.Animacion_form.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.label1.Location = new System.Drawing.Point(17, 244);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(202, 39);

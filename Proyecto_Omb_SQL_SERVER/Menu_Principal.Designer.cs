@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            BunifuAnimatorNS.Animation animation7 = new BunifuAnimatorNS.Animation();
             BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation8 = new BunifuAnimatorNS.Animation();
             BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Principal));
-            BunifuAnimatorNS.Animation animation8 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation7 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Panel_Menu = new System.Windows.Forms.Panel();
             this.Vigencia_SOAT = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -85,7 +85,7 @@
             // 
             // Panel_Menu
             // 
-            this.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
             this.Panel_Menu.Controls.Add(this.Vigencia_SOAT);
             this.Panel_Menu.Controls.Add(this.Date);
             this.Panel_Menu.Controls.Add(this.Hora);
@@ -110,8 +110,8 @@
             // 
             // Vigencia_SOAT
             // 
-            this.Vigencia_SOAT.Activecolor = System.Drawing.SystemColors.MenuHighlight;
-            this.Vigencia_SOAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.Vigencia_SOAT.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
+            this.Vigencia_SOAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
             this.Vigencia_SOAT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Vigencia_SOAT.BorderRadius = 0;
             this.Vigencia_SOAT.ButtonText = "Vigencia SOATS";
@@ -135,8 +135,8 @@
             this.Vigencia_SOAT.IsTab = false;
             this.Vigencia_SOAT.Location = new System.Drawing.Point(0, 564);
             this.Vigencia_SOAT.Name = "Vigencia_SOAT";
-            this.Vigencia_SOAT.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
-            this.Vigencia_SOAT.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.Vigencia_SOAT.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
+            this.Vigencia_SOAT.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.Vigencia_SOAT.OnHoverTextColor = System.Drawing.Color.White;
             this.Vigencia_SOAT.selected = false;
             this.Vigencia_SOAT.Size = new System.Drawing.Size(306, 62);
@@ -235,8 +235,8 @@
             // 
             // btn_Reportes_Pol
             // 
-            this.btn_Reportes_Pol.Activecolor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_Reportes_Pol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.btn_Reportes_Pol.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
+            this.btn_Reportes_Pol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
             this.btn_Reportes_Pol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Reportes_Pol.BorderRadius = 0;
             this.btn_Reportes_Pol.ButtonText = "Vigencia polizas";
@@ -260,8 +260,8 @@
             this.btn_Reportes_Pol.IsTab = false;
             this.btn_Reportes_Pol.Location = new System.Drawing.Point(0, 488);
             this.btn_Reportes_Pol.Name = "btn_Reportes_Pol";
-            this.btn_Reportes_Pol.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
-            this.btn_Reportes_Pol.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_Reportes_Pol.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
+            this.btn_Reportes_Pol.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.btn_Reportes_Pol.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Reportes_Pol.selected = false;
             this.btn_Reportes_Pol.Size = new System.Drawing.Size(306, 62);
@@ -274,8 +274,8 @@
             // 
             // btn_Vehiculos
             // 
-            this.btn_Vehiculos.Activecolor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_Vehiculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.btn_Vehiculos.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
+            this.btn_Vehiculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
             this.btn_Vehiculos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Vehiculos.BorderRadius = 0;
             this.btn_Vehiculos.ButtonText = "Vehiculos";
@@ -299,8 +299,8 @@
             this.btn_Vehiculos.IsTab = false;
             this.btn_Vehiculos.Location = new System.Drawing.Point(0, 418);
             this.btn_Vehiculos.Name = "btn_Vehiculos";
-            this.btn_Vehiculos.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
-            this.btn_Vehiculos.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_Vehiculos.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
+            this.btn_Vehiculos.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.btn_Vehiculos.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Vehiculos.selected = false;
             this.btn_Vehiculos.Size = new System.Drawing.Size(306, 62);
@@ -313,8 +313,8 @@
             // 
             // btn_Beneficiarios
             // 
-            this.btn_Beneficiarios.Activecolor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_Beneficiarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.btn_Beneficiarios.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
+            this.btn_Beneficiarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
             this.btn_Beneficiarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Beneficiarios.BorderRadius = 0;
             this.btn_Beneficiarios.ButtonText = "Beneficiarios";
@@ -338,8 +338,8 @@
             this.btn_Beneficiarios.IsTab = false;
             this.btn_Beneficiarios.Location = new System.Drawing.Point(0, 348);
             this.btn_Beneficiarios.Name = "btn_Beneficiarios";
-            this.btn_Beneficiarios.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
-            this.btn_Beneficiarios.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_Beneficiarios.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
+            this.btn_Beneficiarios.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.btn_Beneficiarios.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Beneficiarios.selected = false;
             this.btn_Beneficiarios.Size = new System.Drawing.Size(306, 62);
@@ -352,8 +352,8 @@
             // 
             // btn_Tomadores
             // 
-            this.btn_Tomadores.Activecolor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_Tomadores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.btn_Tomadores.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
+            this.btn_Tomadores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
             this.btn_Tomadores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Tomadores.BorderRadius = 0;
             this.btn_Tomadores.ButtonText = "Tomadores";
@@ -377,8 +377,8 @@
             this.btn_Tomadores.IsTab = false;
             this.btn_Tomadores.Location = new System.Drawing.Point(0, 278);
             this.btn_Tomadores.Name = "btn_Tomadores";
-            this.btn_Tomadores.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
-            this.btn_Tomadores.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_Tomadores.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
+            this.btn_Tomadores.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.btn_Tomadores.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Tomadores.selected = false;
             this.btn_Tomadores.Size = new System.Drawing.Size(306, 62);
@@ -391,8 +391,8 @@
             // 
             // btn_Listado_Polizas
             // 
-            this.btn_Listado_Polizas.Activecolor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_Listado_Polizas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+            this.btn_Listado_Polizas.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
+            this.btn_Listado_Polizas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
             this.btn_Listado_Polizas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Listado_Polizas.BorderRadius = 0;
             this.btn_Listado_Polizas.ButtonText = "Listado de polizas";
@@ -416,8 +416,8 @@
             this.btn_Listado_Polizas.IsTab = false;
             this.btn_Listado_Polizas.Location = new System.Drawing.Point(0, 208);
             this.btn_Listado_Polizas.Name = "btn_Listado_Polizas";
-            this.btn_Listado_Polizas.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
-            this.btn_Listado_Polizas.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_Listado_Polizas.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
+            this.btn_Listado_Polizas.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.btn_Listado_Polizas.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Listado_Polizas.selected = false;
             this.btn_Listado_Polizas.Size = new System.Drawing.Size(306, 62);
@@ -445,7 +445,7 @@
             // 
             // Panel_herramientas
             // 
-            this.Panel_herramientas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.Panel_herramientas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.Panel_herramientas.Controls.Add(this.bunifuSeparator3);
             this.Panel_herramientas.Controls.Add(this.pictureBox1);
             this.Panel_herramientas.Controls.Add(this.Bienvenida);
@@ -543,14 +543,14 @@
             // Minimizar
             // 
             this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.Menu_Animacion_2.SetDecoration(this.Minimizar, BunifuAnimatorNS.DecorationType.None);
             this.Menu_Animacion.SetDecoration(this.Minimizar, BunifuAnimatorNS.DecorationType.None);
             this.Animacion_TXTS.SetDecoration(this.Minimizar, BunifuAnimatorNS.DecorationType.None);
             this.Animacion_logo.SetDecoration(this.Minimizar, BunifuAnimatorNS.DecorationType.None);
             this.Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Minimizar.Image")));
             this.Minimizar.ImageActive = null;
-            this.Minimizar.Location = new System.Drawing.Point(1138, 8);
+            this.Minimizar.Location = new System.Drawing.Point(1136, 8);
             this.Minimizar.Name = "Minimizar";
             this.Minimizar.Size = new System.Drawing.Size(38, 35);
             this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -562,14 +562,14 @@
             // Maximizar
             // 
             this.Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Maximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.Maximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.Menu_Animacion_2.SetDecoration(this.Maximizar, BunifuAnimatorNS.DecorationType.None);
             this.Menu_Animacion.SetDecoration(this.Maximizar, BunifuAnimatorNS.DecorationType.None);
             this.Animacion_TXTS.SetDecoration(this.Maximizar, BunifuAnimatorNS.DecorationType.None);
             this.Animacion_logo.SetDecoration(this.Maximizar, BunifuAnimatorNS.DecorationType.None);
             this.Maximizar.Image = ((System.Drawing.Image)(resources.GetObject("Maximizar.Image")));
             this.Maximizar.ImageActive = null;
-            this.Maximizar.Location = new System.Drawing.Point(1182, 8);
+            this.Maximizar.Location = new System.Drawing.Point(1182, 9);
             this.Maximizar.Name = "Maximizar";
             this.Maximizar.Size = new System.Drawing.Size(38, 35);
             this.Maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -581,14 +581,14 @@
             // Cerrar
             // 
             this.Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.Cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.Menu_Animacion_2.SetDecoration(this.Cerrar, BunifuAnimatorNS.DecorationType.None);
             this.Menu_Animacion.SetDecoration(this.Cerrar, BunifuAnimatorNS.DecorationType.None);
             this.Animacion_TXTS.SetDecoration(this.Cerrar, BunifuAnimatorNS.DecorationType.None);
             this.Animacion_logo.SetDecoration(this.Cerrar, BunifuAnimatorNS.DecorationType.None);
             this.Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Cerrar.Image")));
             this.Cerrar.ImageActive = null;
-            this.Cerrar.Location = new System.Drawing.Point(1226, 8);
+            this.Cerrar.Location = new System.Drawing.Point(1228, 8);
             this.Cerrar.Name = "Cerrar";
             this.Cerrar.Size = new System.Drawing.Size(38, 35);
             this.Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -600,7 +600,7 @@
             // Restaurar
             // 
             this.Restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Restaurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.Restaurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.Menu_Animacion_2.SetDecoration(this.Restaurar, BunifuAnimatorNS.DecorationType.None);
             this.Menu_Animacion.SetDecoration(this.Restaurar, BunifuAnimatorNS.DecorationType.None);
             this.Animacion_TXTS.SetDecoration(this.Restaurar, BunifuAnimatorNS.DecorationType.None);
@@ -633,22 +633,22 @@
             // 
             this.Animacion_TXTS.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.Animacion_TXTS.Cursor = null;
-            animation6.AnimateOnlyDifferences = true;
-            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
-            animation6.LeafCoeff = 0F;
-            animation6.MaxTime = 1F;
-            animation6.MinTime = 0F;
-            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
-            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
-            animation6.MosaicSize = 0;
-            animation6.Padding = new System.Windows.Forms.Padding(0);
-            animation6.RotateCoeff = 0F;
-            animation6.RotateLimit = 0F;
-            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
-            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
-            animation6.TimeCoeff = 0F;
-            animation6.TransparencyCoeff = 0F;
-            this.Animacion_TXTS.DefaultAnimation = animation6;
+            animation7.AnimateOnlyDifferences = true;
+            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
+            animation7.LeafCoeff = 0F;
+            animation7.MaxTime = 1F;
+            animation7.MinTime = 0F;
+            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
+            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
+            animation7.MosaicSize = 0;
+            animation7.Padding = new System.Windows.Forms.Padding(0);
+            animation7.RotateCoeff = 0F;
+            animation7.RotateLimit = 0F;
+            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
+            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
+            animation7.TimeCoeff = 0F;
+            animation7.TransparencyCoeff = 0F;
+            this.Animacion_TXTS.DefaultAnimation = animation7;
             // 
             // Panel_Principal
             // 
@@ -668,22 +668,22 @@
             // 
             this.Menu_Animacion.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.Menu_Animacion.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 0;
-            animation5.Padding = new System.Windows.Forms.Padding(0);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 0F;
-            this.Menu_Animacion.DefaultAnimation = animation5;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 0F;
+            this.Menu_Animacion.DefaultAnimation = animation6;
             // 
             // Animacion_logo
             // 
@@ -710,22 +710,22 @@
             // 
             this.Menu_Animacion_2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.Menu_Animacion_2.Cursor = null;
-            animation7.AnimateOnlyDifferences = true;
-            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
-            animation7.LeafCoeff = 0F;
-            animation7.MaxTime = 1F;
-            animation7.MinTime = 0F;
-            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
-            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
-            animation7.MosaicSize = 0;
-            animation7.Padding = new System.Windows.Forms.Padding(0);
-            animation7.RotateCoeff = 0F;
-            animation7.RotateLimit = 0F;
-            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
-            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
-            animation7.TimeCoeff = 0F;
-            animation7.TransparencyCoeff = 0F;
-            this.Menu_Animacion_2.DefaultAnimation = animation7;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.Menu_Animacion_2.DefaultAnimation = animation5;
             // 
             // timer1
             // 

@@ -78,7 +78,7 @@
             this.DataGrid_Listado_Vig_Pol.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGrid_Listado_Vig_Pol.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(47)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -97,7 +97,7 @@
             this.DataGrid_Listado_Vig_Pol.DoubleBuffered = true;
             this.DataGrid_Listado_Vig_Pol.EnableHeadersVisualStyles = false;
             this.DataGrid_Listado_Vig_Pol.GridColor = System.Drawing.Color.Gainsboro;
-            this.DataGrid_Listado_Vig_Pol.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(47)))), ((int)(((byte)(107)))));
+            this.DataGrid_Listado_Vig_Pol.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.DataGrid_Listado_Vig_Pol.HeaderForeColor = System.Drawing.Color.White;
             this.DataGrid_Listado_Vig_Pol.Location = new System.Drawing.Point(12, 6);
             this.DataGrid_Listado_Vig_Pol.Name = "DataGrid_Listado_Vig_Pol";

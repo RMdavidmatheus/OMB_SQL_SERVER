@@ -48,7 +48,7 @@
             this.Label_Alert.AutoSize = true;
             this.Label_Alert.Font = new System.Drawing.Font("Roboto Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Alert.ForeColor = System.Drawing.SystemColors.Control;
-            this.Label_Alert.Location = new System.Drawing.Point(77, 64);
+            this.Label_Alert.Location = new System.Drawing.Point(76, 78);
             this.Label_Alert.Name = "Label_Alert";
             this.Label_Alert.Size = new System.Drawing.Size(367, 42);
             this.Label_Alert.TabIndex = 0;
@@ -57,7 +57,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 58);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(59, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -80,7 +80,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(458, 142);
+            this.ClientSize = new System.Drawing.Size(458, 160);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Label_Alert);

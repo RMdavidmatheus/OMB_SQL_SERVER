@@ -157,7 +157,7 @@ namespace Proyecto_Omb_SQL_SERVER
         {
             //this.WindowState = FormWindowState.Normal;
 
-            this.Size = new Size(1280, 720);
+            this.Size = new Size(1280, 767);
             this.Location = new Point(LX, LY);
             Maximizar.Visible = true;
             Restaurar.Visible = false;
