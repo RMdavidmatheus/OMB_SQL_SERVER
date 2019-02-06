@@ -79,12 +79,14 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
                 if (Metodos.Insertar(query))
                 {
-                    MessageBox.Show("Tomador Ingresado correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Alert.Alert.Show_Alert_Message("Tomador agregado", Alert.Alert.AlertType.success);
+                    //MessageBox.Show("Tomador Ingresado correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     Contenido_control.SelectedTab = Beneficiario_tab;
                 }
                 else
                 {
-                    MessageBox.Show("Error al ingresar Tomador", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Alert.Alert.Show_Alert_Message("Error al ingresar tomador", Alert.Alert.AlertType.error);
+                    //MessageBox.Show("Error al ingresar Tomador", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 // ACTUALIZAR AUTOMATICAMENTE POLIZA SI ESTA ACTIVA O INACTIVA
                 string PolqueryActivo = "UPDATE Poliza SET Pol_Estado = 'ACTIVO' where Pol_Vigencia_Final >= GETDATE()";
@@ -154,12 +156,14 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
                 if (Metodos.Insertar(query))
                 {
-                    MessageBox.Show("Beneficiario Ingresado correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Alert.Alert.Show_Alert_Message("Beneficiario agregado", Alert.Alert.AlertType.success);
+                    //MessageBox.Show("Beneficiario Ingresado correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     Contenido_control.SelectedTab = Poliza_tab;
                 }
                 else
                 {
-                    MessageBox.Show("Error al ingresar Beneficiario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Alert.Alert.Show_Alert_Message("Error al agregar beneficiario", Alert.Alert.AlertType.error);
+                    //MessageBox.Show("Error al ingresar Beneficiario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 // ACTUALIZAR AUTOMATICAMENTE POLIZA SI ESTA ACTIVA O INACTIVA
                 string PolqueryActivo = "UPDATE Poliza SET Pol_Estado = 'ACTIVO' where Pol_Vigencia_Final >= GETDATE()";
@@ -214,7 +218,8 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
                 if (Metodos.Insertar(query))
                 {
-                    MessageBox.Show("Poliza Ingresada correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Alert.Alert.Show_Alert_Message("Poliza agregada", Alert.Alert.AlertType.success);
+                    //MessageBox.Show("Poliza Ingresada correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     // CONDICINANDO EL REDIRECCIONAMIENTO Y HABILITANDO VEHICULO SI CUMPLE
                     if (CB_Ramo.selectedValue == "AUTOS")
                     {
@@ -223,12 +228,13 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                     }
                     else
                     {
-                        // NO SE ACOPLA LA TAB VEHICULO
+                        this.Close();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Error al ingresar Poliza", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Alert.Alert.Show_Alert_Message("Error al agregar poliza", Alert.Alert.AlertType.error);
+                    //MessageBox.Show("Error al ingresar Poliza", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 // ACTUALIZAR AUTOMATICAMENTE POLIZA SI ESTA ACTIVA O INACTIVA
                 string PolqueryActivo = "UPDATE Poliza SET Pol_Estado = 'ACTIVO' where Pol_Vigencia_Final >= GETDATE()";
@@ -312,16 +318,20 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
                 if (Metodos.Insertar(query))
                 {
-                    MessageBox.Show("Vehiculo Ingresado correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Alert.Alert.Show_Alert_Message("Vehiculo agregado", Alert.Alert.AlertType.success);
+                    //MessageBox.Show("Vehiculo Ingresado correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                     // HACIENDO RELACION CON TABLA POL_VEH AUTOMATICAMENTE
 
                     string query2 = "INSERT INTO Polizas_Vehiculos (PolVeh_Numero_Poliza,PolVeh_Veh_Placa) VALUES('"+Txt_No_Poliza.Text+"','"+Txt_Placa.Text+"')";
                     Metodos.Insertar(query2);
+                    // CERRANDO LUEGO DE INSERT
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Error al ingresar vehiculo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Alert.Alert.Show_Alert_Message("Error al ingresar vehiculo", Alert.Alert.AlertType.error);
+                    //MessageBox.Show("Error al ingresar vehiculo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 // ACTUALIZAR AUTOMATICAMENTE POLIZA SI ESTA ACTIVA O INACTIVA
                 string PolqueryActivo = "UPDATE Poliza SET Pol_Estado = 'ACTIVO' where Pol_Vigencia_Final >= GETDATE()";
@@ -386,44 +396,40 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 Txt_Valor_Auto.Text = num_2.ToString("N0");
                 Txt_Valor_Auto.SelectionStart = Txt_Valor_Auto.TextLength;
             }
-            // MENSAJES DE INFORMACION...
-            Mensaje.SetToolTip(Drop_Tp_Doc_Tom, "Documento para el tomador");
+            //// MENSAJES DE INFORMACION...
+            //Mensaje.SetToolTip(Drop_Tp_Doc_Tom, "Documento para el tomador");
         }
 
         private void Act_Tom_Click(object sender, EventArgs e)
         {
             // VALIDACION DATOS VACIOS
-            if (Txt_Placa.Text == "")
+            if (Txt_Doc_Tom.Text == "")
             {
-                MessageBox.Show("Ingrese una placa", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ingrese un documento", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (Txt_Modelo.Text == "")
+            else if (Txt_Nom_Tom.Text == "")
             {
-                MessageBox.Show("Ingrese un modelo", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ingrese un nombre", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (Txt_Fasecolda.Text == "")
+            else if (Txt_Ape_Tom.Text == "")
             {
-                MessageBox.Show("Ingrese un fasecolda", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ingrese un apellido", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (Txt_Servicio.Text == "")
+            else if (Txt_Direccion_Tom.Text == "")
             {
-                MessageBox.Show("Ingrese un servicio del auto", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ingrese una direcciòn", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (Txt_Clase.Text == "")
+            else if (Txt_Tel_Tom.Text == "")
             {
-                MessageBox.Show("Ingrese una clase del auto", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ingrese un telèfono", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (Txt_Marca.Text == "")
+            else if (Txt_Email_Tom.Text == "")
             {
-                MessageBox.Show("Ingrese una marca", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ingrese un email", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (Txt_Valor_Auto.Text == "")
+            else if (Txt_Fecha_Nacimiento_Tom.Text == "Fecha de nacimiento...")
             {
-                MessageBox.Show("Ingrese un valor del auto", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (Txt_Vig_Soat.Text == "Vigencia SOAT")
-            {
-                MessageBox.Show("Ingrese una vigencia para el soat", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ingrese una fecha de nacimiento", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             // FINALIZACION VALIDACION CAMPOS VACIOS
             else
@@ -433,12 +439,14 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
                 if (Metodos.Actualizar(query))
                 {
-                    MessageBox.Show("Tomador actualizado correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Alert.Alert.Show_Alert_Message("Tomador actualizado", Alert.Alert.AlertType.success);
+                    //MessageBox.Show("Tomador actualizado correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     Contenido_control.SelectedTab = Beneficiario_tab;
                 }
                 else
                 {
-                    MessageBox.Show("Error al actualizar Tomador", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Alert.Alert.Show_Alert_Message("Error al actualizar tomador", Alert.Alert.AlertType.error);
+                    //MessageBox.Show("Error al actualizar Tomador", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 // FINALIZACION DEL UPDATE
             }
@@ -496,12 +504,14 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 string query = "UPDATE Beneficiario Set Ben_Tipo_Doc='" + TP_Doc_Ben.selectedValue.ToString() + "', Ben_Nombres='" + Txt_Nom_Ben.Text + "',Ben_Apellidos='" + Txt_Ape_Ben.Text + "',Ben_Direccion='" + Txt_Dir_Ben.Text + "',Ben_Telefono='" + Txt_Tel_Ben.Text + "',Ben_Email='" + Txt_Email_Ben.Text + "',Ben_Fecha_Nacimiento='" + Txt_Fecha_Nacimiento_Ben.Text + "' WHERE Ben_Documento='" + Txt_Doc_Ben.Text + "'";
                 if (Metodos.Actualizar(query))
                 {
-                    MessageBox.Show("Beneficiario actualizado correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Alert.Alert.Show_Alert_Message("Beneficiario actualizado", Alert.Alert.AlertType.success);
+                    //MessageBox.Show("Beneficiario actualizado correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     Contenido_control.SelectedTab = Poliza_tab;
                 }
                 else
                 {
-                    MessageBox.Show("Error al actualizar Beneficiario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Alert.Alert.Show_Alert_Message("Error al actualizar beneficiario", Alert.Alert.AlertType.error);
+                    //MessageBox.Show("Error al actualizar Beneficiario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             // ACTUALIZAR AUTOMATICAMENTE POLIZA SI ESTA ACTIVA O INACTIVA
@@ -560,12 +570,14 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 string query = "UPDATE Vehiculo Set Veh_Modelo='" + Txt_Modelo.Text + "', Veh_Fasecolda='" + Txt_Fasecolda.Text + "',Veh_Servicio='" + Txt_Servicio.Text + "',Veh_Clase='" + Txt_Clase.Text + "',Veh_Marca='" + Txt_Marca.Text + "',Veh_Valor_Auto='" + num_2.ToString() + "',Veh_Vigencia_Soat='" + Txt_Vig_Soat.Text + "' WHERE Veh_Placa='" + Txt_Placa.Text + "'";
                 if (Metodos.Actualizar(query))
                 {
-                    MessageBox.Show("Vehiculo actualizado correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Alert.Alert.Show_Alert_Message("Vehiculo actualizado", Alert.Alert.AlertType.success);
+                    //MessageBox.Show("Vehiculo actualizado correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Error al actualizar Vehiculo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Alert.Alert.Show_Alert_Message("Error al actualizar vehiculo", Alert.Alert.AlertType.error);
+                    //MessageBox.Show("Error al actualizar Vehiculo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -609,7 +621,8 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
             if (Metodos.Actualizar(query))
             {
-                MessageBox.Show("Actualizo la poliza correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Alert.Alert.Show_Alert_Message("Poliza actualizada", Alert.Alert.AlertType.success);
+                //MessageBox.Show("Actualizo la poliza correctamente", "SATISFACTORIO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 if (CB_Ramo.selectedValue.Equals("AUTOS"))
                 {
@@ -624,7 +637,8 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
             }
             else
             {
-                MessageBox.Show("Error al actualizar la poliza", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Alert.Alert.Show_Alert_Message("Error al actualizar poliza", Alert.Alert.AlertType.error);
+                //MessageBox.Show("Error al actualizar la poliza", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             // ACTUALIZAR AUTOMATICAMENTE POLIZA SI ESTA ACTIVA O INACTIVA
             string PolqueryActivo = "UPDATE Poliza SET Pol_Estado = 'ACTIVO' where Pol_Vigencia_Final >= GETDATE()";

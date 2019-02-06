@@ -27,7 +27,6 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 Primary.Blue900, Accent.Blue400,
                 TextShade.WHITE);
             DataGrid_Listado_Polizas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            //DataGrid_Listado_Polizas.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
         // INSTANCIANDO METODOS
@@ -43,6 +42,7 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
         private void Listado_Polizas_Load(object sender, EventArgs e)
         {
             Metodos.LlenarTabla_Poliza(DataGrid_Listado_Polizas);
+            // SISTEMA DE NOTIFIACION...
         }
 
         private void Añadir_Click(object sender, EventArgs e)
@@ -522,17 +522,19 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 string querypol = "DELETE FROM Poliza WHERE  Pol_Numero_Poliza='" + DataGrid_Listado_Polizas.CurrentRow.Cells[0].Value.ToString() + "' ";
                 if (Metodos.Eliminar(querypol))
                 {
-                    MessageBox.Show("Poliza Eliminada Correctamente");
+                    Alert.Alert.Show_Alert_Message("Poliza Eliminada Correctamente",Alert.Alert.AlertType.success);
+                    //MessageBox.Show("Poliza Eliminada Correctamente");
                     //Metodos.LlenarTabla_Poliza(Listado);
 
 
                 }
                 else
                 {
-                    MessageBox.Show("ERROR al eliminar Poliza");
-                    //Metodos.LlenarTabla_Poliza(Listado);
+                    Alert.Alert.Show_Alert_Message("Error al eliminar Poliza", Alert.Alert.AlertType.error);
+                        //Metodos.LlenarTabla_Poliza(DataGrid_Listado_Polizas);
+                        //MessageBox.Show("ERROR al eliminar Poliza");
 
-                }
+                    }
 
                 //ELIMINANDO TOMADOR
                 string querytom = "DELETE FROM Tomador WHERE  Tom_Documento= '" + DocumentoTom + "'    ";
@@ -581,17 +583,19 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 string querypol = "DELETE FROM Poliza WHERE  Pol_Numero_Poliza='" + DataGrid_Listado_Polizas.CurrentRow.Cells[0].Value.ToString() + "' ";
                 if (Metodos.Eliminar(querypol))
                 {
-                    MessageBox.Show("Poliza Eliminada Correctamente");
-                    //Metodos.LlenarTabla_Poliza(Listado);
+                    Alert.Alert.Show_Alert_Message("Poliza Eliminada Correctamente", Alert.Alert.AlertType.success);
+                        //Metodos.LlenarTabla_Poliza(DataGrid_Listado_Polizas);
+                        //MessageBox.Show("Poliza Eliminada Correctamente");
 
 
-                }
+                    }
                 else
                 {
-                    MessageBox.Show("ERROR al eliminar Poliza");
-                    //Metodos.LlenarTabla_Poliza(Listado);
+                    Alert.Alert.Show_Alert_Message("Error al eliminar poliza", Alert.Alert.AlertType.error);
+                        //Metodos.LlenarTabla_Poliza(DataGrid_Listado_Polizas);
+                        //MessageBox.Show("ERROR al eliminar Poliza");
 
-                }
+                    }
 
                 //ELIMINANDO TOMADOR
                 string querytom = "DELETE FROM Tomador WHERE  Tom_Documento= '" + DocumentoTom + "'    ";
@@ -629,7 +633,7 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
             }
             else
             {
-                MessageBox.Show("Seleccione un registro para eliminar","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                Alert.Alert.Show_Alert_Message("Seleccione un registro para eliminar",Alert.Alert.AlertType.warning);
             }
 
         }
@@ -816,27 +820,10 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
             }
             else
             {
-                MessageBox.Show("Seleccione una columna", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Alert.Alert.Show_Alert_Message("Seleccione un registro para editar",Alert.Alert.AlertType.warning);
             }
             // REFRESCANDO TABLA
             if (Editar.Visible == false)
-            {
-                Metodos.LlenarTabla_Poliza(DataGrid_Listado_Polizas);
-                // ACTUALIZAR AUTOMATICAMENTE POLIZA SI ESTA ACTIVA O INACTIVA
-                string PolqueryActivo = "UPDATE Poliza SET Pol_Estado = 'ACTIVO' where Pol_Vigencia_Final >= GETDATE()";
-                Metodos.Insertar(PolqueryActivo);
-                string PolqueryInactivo = "UPDATE Poliza SET Pol_Estado = 'INACTIVO' where Pol_Vigencia_Final < GETDATE()";
-                Metodos.Insertar(PolqueryInactivo);
-                // FINALIZACION POLIZA UPDATE
-
-                //ACTUALIZAR ACTIVO O INACTIVO EN VEHICULOS
-                string SOATqueryActivo = "UPDATE Vehiculo SET Veh_Soat_Estado = 'ACTIVO' where Veh_Vigencia_Soat >= GETDATE()";
-                Metodos.Insertar(SOATqueryActivo);
-                string SOATqueryInactivo = "UPDATE Vehiculo SET Veh_Soat_Estado = 'INACTIVO' where Veh_Vigencia_Soat < GETDATE()";
-                Metodos.Insertar(SOATqueryInactivo);
-                // FIN 
-            }
-            else
             {
                 Metodos.LlenarTabla_Poliza(DataGrid_Listado_Polizas);
                 // ACTUALIZAR AUTOMATICAMENTE POLIZA SI ESTA ACTIVA O INACTIVA
@@ -881,10 +868,11 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 string SOATqueryInactivo = "UPDATE Vehiculo SET Veh_Soat_Estado = 'INACTIVO' where Veh_Vigencia_Soat < GETDATE()";
                 Metodos.Insertar(SOATqueryInactivo);
                 // FIN
+                Alert.Alert.Show_Alert_Message("Registro agregado",Alert.Alert.AlertType.success);
             }
             else
             {
-                // NADA SOLO CUANDO SE CIERRA MOSTRARA LA ACTUALIZACION DE LA TABLA
+                Alert.Alert.Show_Alert_Message("Error al agregar registro",Alert.Alert.AlertType.error);
             }
         }
 

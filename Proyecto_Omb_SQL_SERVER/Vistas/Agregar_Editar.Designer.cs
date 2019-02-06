@@ -155,7 +155,7 @@
             // Act_Tom
             // 
             this.Act_Tom.Depth = 0;
-            this.Act_Tom.Location = new System.Drawing.Point(133, 564);
+            this.Act_Tom.Location = new System.Drawing.Point(133, 548);
             this.Act_Tom.MouseState = MaterialSkin.MouseState.HOVER;
             this.Act_Tom.Name = "Act_Tom";
             this.Act_Tom.Primary = true;

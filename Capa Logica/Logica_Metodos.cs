@@ -209,7 +209,7 @@ namespace Capa_Logica
         {
             // TOMANDO DATOS CONCRETOS DE POLIZA
             DataTable dt = new DataTable();
-            SqlCommand query = new SqlCommand("select p.Tipo_Poliza_ID , p.Aseguradora_ID, p.Pol_Valor_Prima from Poliza p where p.Pol_Numero_Poliza = '" + Num_pol + "' ", Conexion.Conectar());
+            SqlCommand query = new SqlCommand("select * from Poliza p where p.Pol_Numero_Poliza = '" + Num_pol + "' ", Conexion.Conectar());
             SqlDataAdapter rs = new SqlDataAdapter(query);
             rs.Fill(dt);
 
