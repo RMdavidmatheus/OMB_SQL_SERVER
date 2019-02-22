@@ -1,0 +1,36 @@
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\Proyecto_Omb_SQL_SERVER.exe.config
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\Proyecto_Omb_SQL_SERVER.exe
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\Proyecto_Omb_SQL_SERVER.pdb
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\Bunifu_UI_v1.52.dll
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\Capa Logica.dll
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\Capa_LogIn.dll
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\itextsharp.dll
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\MaterialDesignColors.dll
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\MaterialDesignThemes.Wpf.dll
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\MaterialSkin.dll
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\Capa Logica.pdb
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\Capa_LogIn.pdb
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\itextsharp.xml
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\MaterialDesignThemes.Wpf.pdb
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\bin\Release\MaterialDesignThemes.Wpf.xml
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Capa Presentacion.csprojAssemblyReference.cache
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Alert.Alert.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Menu_Principal.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Properties.Resources.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Vistas.Agregar_Editar.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Vistas.Calendar_Date_Picker.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Vistas.Listado_Beneficiarios.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Vistas.Listado_Polizas.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Vistas.Listado_reporte_SOAT.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Vistas.Listado_Reporte_Vig_Pol.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Vistas.Listado_Tomadores.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Vistas.Listado_Vehiculos.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Vistas.Loading_Form.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Vistas.Log_In.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Vistas.Vista_Inicio.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.Vistas.Vista_Recuperar_Pass.resources
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Capa Presentacion.csproj.GenerateResource.cache
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Capa Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Capa Presentacion.csproj.CopyComplete
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.exe
+C:\Users\David PC\source\repos\Proyecto_Omb_SQL_SERVER\Proyecto_Omb_SQL_SERVER\obj\Release\Proyecto_Omb_SQL_SERVER.pdb

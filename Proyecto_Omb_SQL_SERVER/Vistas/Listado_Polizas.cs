@@ -868,11 +868,15 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 string SOATqueryInactivo = "UPDATE Vehiculo SET Veh_Soat_Estado = 'INACTIVO' where Veh_Vigencia_Soat < GETDATE()";
                 Metodos.Insertar(SOATqueryInactivo);
                 // FIN
-                Alert.Alert.Show_Alert_Message("Registro agregado",Alert.Alert.AlertType.success);
+            }
+
+            if (Añadir.Visible == true)
+            {
+                Alert.Alert.Show_Alert_Message("Error al agregar registro", Alert.Alert.AlertType.error);
             }
             else
             {
-                Alert.Alert.Show_Alert_Message("Error al agregar registro",Alert.Alert.AlertType.error);
+                Alert.Alert.Show_Alert_Message("Registro agregado", Alert.Alert.AlertType.success);
             }
         }
 

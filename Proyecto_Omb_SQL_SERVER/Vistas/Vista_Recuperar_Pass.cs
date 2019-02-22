@@ -35,6 +35,7 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
         private void Btn_Enviar_Click(object sender, EventArgs e)
         {
             MessageBox.Show(Metodos.Metodo_Recuperar_Contrasena(Txt_Doc.Text));
+            Alert.Alert.Show_Alert_Message("Contraseña recuperada",Alert.Alert.AlertType.success);
         }
     }
 }

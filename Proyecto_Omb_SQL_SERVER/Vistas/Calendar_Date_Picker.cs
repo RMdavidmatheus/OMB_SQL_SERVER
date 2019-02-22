@@ -39,7 +39,8 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
         private void Guardar_Date_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Fecha ingresada correctamente","EXITO",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            Alert.Alert.Show_Alert_Message("Fecha ingresada",Alert.Alert.AlertType.success);
+            //MessageBox.Show("Fecha ingresada correctamente","EXITO",MessageBoxButtons.OK,MessageBoxIcon.Information);
             this.Close();
         }
     }

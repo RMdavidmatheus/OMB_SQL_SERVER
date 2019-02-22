@@ -68,7 +68,7 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
         private void Listado_reporte_SOAT_Load(object sender, EventArgs e)
         {
-            Metodos.LlenarTabla_SOAT(DataGrid_Listado_Vig_SOAT);
+            //Metodos.LlenarTabla_SOAT(DataGrid_Listado_Vig_SOAT,1);
             // ACTUALIZAR AUTOMATICAMENTE POLIZA SI ESTA ACTIVA O INACTIVA
             string PolqueryActivo = "UPDATE Poliza SET Pol_Estado = 'ACTIVO' where Pol_Vigencia_Final >= GETDATE()";
             Metodos.Insertar(PolqueryActivo);
@@ -86,13 +86,21 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
         private void PDF_Click(object sender, EventArgs e)
         {
-            iTextSharp.text.Image Logo = iTextSharp.text.Image.GetInstance("C:\\Users\\David PC\\Pictures\\Logo.png");
+            iTextSharp.text.Image Logo = iTextSharp.text.Image.GetInstance("C:\\Program Files\\OMB\\Programa OMB Seguros\\Images\\Logo.png");
             iTextSharp.text.Font palatino = FontFactory.GetFont("MS GOTHIC", 15, iTextSharp.text.Font.BOLD);
             palatino.SetColor(246, 246, 246);
+
+            // VALIDANDO QUE EL DATA GRID NO ESTE VACIO, SI LO ESTA QUE AVISE POR ALERT
+            if (DataGrid_Listado_Vig_SOAT.DataSource==null)
+            {
+                Alert.Alert.Show_Alert_Message("Genere la tabla para realizar PDF",Alert.Alert.AlertType.warning);
+            }
+            else
+            {
             //CREANDO EL ARCHIVO CON ITEXTSHARP
             PdfPTable pdfTable = new PdfPTable(DataGrid_Listado_Vig_SOAT.ColumnCount);
             pdfTable.DefaultCell.Padding = 3;
-            pdfTable.DefaultCell.BackgroundColor = new iTextSharp.text.BaseColor(224, 224, 224);
+            pdfTable.DefaultCell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
             pdfTable.WidthPercentage = 100;
             pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
             pdfTable.DefaultCell.BorderWidth = 1;
@@ -148,12 +156,34 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
                 pdfDoc.Add(new Paragraph("" + System.DateTime.Now + "", FontFactory.GetFont("ARIAL", 9, iTextSharp.text.Font.NORMAL)));
                 pdfDoc.Close();
                 stream.Close();
+                Alert.Alert.Show_Alert_Message("PDF Guardado correctamente", Alert.Alert.AlertType.success);
             }
+            else
+            {
+                Alert.Alert.Show_Alert_Message("Error al guardar PDF", Alert.Alert.AlertType.error);
+            }
+          }
         }
 
         private void Buscar_KeyUp(object sender, KeyEventArgs e)
         {
-            Metodos.Reporte_SOAT_Buscar(DataGrid_Listado_Vig_SOAT,Buscar.Text);
+            if (Buscar.Text=="")
+            {
+                DataGrid_Listado_Vig_SOAT.DataSource = null;
+            }
+            else
+            {
+                Metodos.Reporte_SOAT_Buscar(DataGrid_Listado_Vig_SOAT,Buscar.Text);
+            }
+        }
+
+        private void DP_Mes_onItemSelected(object sender, EventArgs e)
+        {
+            if (DP_Mes.selectedIndex >=0)
+            {
+                int Selected_Correctly = DP_Mes.selectedIndex + 1;
+                Metodos.LlenarTabla_SOAT(DataGrid_Listado_Vig_SOAT,Selected_Correctly);
+            }
         }
     }
 }

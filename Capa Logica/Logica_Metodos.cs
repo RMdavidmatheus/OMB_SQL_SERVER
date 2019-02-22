@@ -105,11 +105,11 @@ namespace Capa_Logica
             Conexion.Desconectar();
         }
         // METODO PARA LLENAR DATAGRID REPORTE SOAT
-        public void LlenarTabla_SOAT(DataGridView Llenar)
+        public void LlenarTabla_SOAT(DataGridView Llenar, int Seleccion_index)
         {
             try
             {
-                SqlCommand query = new SqlCommand("SELECT* from Vista_reporte_soat", Conexion.Conectar());
+                SqlCommand query = new SqlCommand("SELECT* from Vista_reporte_soat vrs WHERE MONTH(vrs.[Vigencia SOAT])= '"+Seleccion_index+"'", Conexion.Conectar());
                 SqlDataAdapter rs = new SqlDataAdapter(query);
                 DataTable dt = new DataTable();
                 rs.Fill(dt);
@@ -122,11 +122,11 @@ namespace Capa_Logica
             Conexion.Desconectar();
         }
         // METODO PARA LLENAR DATAGRID REPORTE VIGENCIAS
-        public void LlenarTabla_Vigencia(DataGridView Llenar)
+        public void LlenarTabla_Vigencia(DataGridView Llenar, int Mes)
         {
             try
             {
-                SqlCommand query = new SqlCommand("SELECT* from Vista_reporte_vigencias", Conexion.Conectar());
+                SqlCommand query = new SqlCommand("SELECT* from Vista_reporte_vigencias vrv WHERE MONTH(vrv.[Vigencia Final])='"+Mes+"'", Conexion.Conectar());
                 SqlDataAdapter rs = new SqlDataAdapter(query);
                 DataTable dt = new DataTable();
                 rs.Fill(dt);
@@ -339,7 +339,7 @@ namespace Capa_Logica
         {
             try
             {
-                SqlCommand query = new SqlCommand("select * from vigencia_soat_mes vs where vs.Placa LIKE '" + TextoBusqueda + "%' OR vs.`N.Poliza` LIKE '" + TextoBusqueda + "%' OR vs.`Documento Tomador`LIKE '" + TextoBusqueda + "%' OR vs.`Nombres Tomador` LIKE '" + TextoBusqueda + "%' ", Conexion.Conectar());
+                SqlCommand query = new SqlCommand("select * from Vista_reporte_soat vsr where vsr.Placa LIKE '" + TextoBusqueda + "%' OR vsr.[Numero de poliza] LIKE '" + TextoBusqueda + "%' OR vsr.Documento LIKE '" + TextoBusqueda + "%' OR vsr.Nombres LIKE '" + TextoBusqueda + "%' ", Conexion.Conectar());
                 SqlDataAdapter rs = new SqlDataAdapter(query);
                 DataTable dt = new DataTable();
                 rs.Fill(dt);

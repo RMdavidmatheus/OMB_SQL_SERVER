@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listado_reporte_SOAT));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Panel_Superior = new System.Windows.Forms.Panel();
             this.PDF = new Bunifu.Framework.UI.BunifuImageButton();
@@ -42,6 +42,7 @@
             this.Buscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.DataGrid_Listado_Vig_SOAT = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DP_Mes = new Bunifu.Framework.UI.BunifuDropdown();
             this.Panel_Superior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PDF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -52,12 +53,13 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this.DataGrid_Listado_Vig_SOAT;
             // 
             // Panel_Superior
             // 
             this.Panel_Superior.BackColor = System.Drawing.Color.White;
+            this.Panel_Superior.Controls.Add(this.DP_Mes);
             this.Panel_Superior.Controls.Add(this.PDF);
             this.Panel_Superior.Controls.Add(this.pictureBox2);
             this.Panel_Superior.Controls.Add(this.pictureBox1);
@@ -73,7 +75,7 @@
             this.PDF.BackColor = System.Drawing.Color.White;
             this.PDF.Image = ((System.Drawing.Image)(resources.GetObject("PDF.Image")));
             this.PDF.ImageActive = null;
-            this.PDF.Location = new System.Drawing.Point(12, 149);
+            this.PDF.Location = new System.Drawing.Point(435, 151);
             this.PDF.Name = "PDF";
             this.PDF.Size = new System.Drawing.Size(33, 30);
             this.PDF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,7 +97,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(62, 149);
+            this.pictureBox1.Location = new System.Drawing.Point(478, 151);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,61 +111,72 @@
             this.Buscar.Depth = 0;
             this.Buscar.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscar.Hint = "Buscar...";
-            this.Buscar.Location = new System.Drawing.Point(97, 156);
+            this.Buscar.Location = new System.Drawing.Point(513, 156);
             this.Buscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.Buscar.Name = "Buscar";
             this.Buscar.PasswordChar = '\0';
             this.Buscar.SelectedText = "";
             this.Buscar.SelectionLength = 0;
             this.Buscar.SelectionStart = 0;
-            this.Buscar.Size = new System.Drawing.Size(1164, 23);
+            this.Buscar.Size = new System.Drawing.Size(748, 23);
             this.Buscar.TabIndex = 3;
             this.Buscar.UseSystemPasswordChar = false;
             this.Buscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Buscar_KeyUp);
             // 
             // DataGrid_Listado_Vig_SOAT
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DataGrid_Listado_Vig_SOAT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGrid_Listado_Vig_SOAT.AllowUserToAddRows = false;
+            this.DataGrid_Listado_Vig_SOAT.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DataGrid_Listado_Vig_SOAT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.DataGrid_Listado_Vig_SOAT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataGrid_Listado_Vig_SOAT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGrid_Listado_Vig_SOAT.BackgroundColor = System.Drawing.Color.White;
             this.DataGrid_Listado_Vig_SOAT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGrid_Listado_Vig_SOAT.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGrid_Listado_Vig_SOAT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGrid_Listado_Vig_SOAT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGrid_Listado_Vig_SOAT.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGrid_Listado_Vig_SOAT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.DataGrid_Listado_Vig_SOAT.ColumnHeadersHeight = 75;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGrid_Listado_Vig_SOAT.DefaultCellStyle = dataGridViewCellStyle19;
             this.DataGrid_Listado_Vig_SOAT.DoubleBuffered = true;
             this.DataGrid_Listado_Vig_SOAT.EnableHeadersVisualStyles = false;
-            this.DataGrid_Listado_Vig_SOAT.GridColor = System.Drawing.Color.Gainsboro;
+            this.DataGrid_Listado_Vig_SOAT.GridColor = System.Drawing.Color.White;
             this.DataGrid_Listado_Vig_SOAT.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
             this.DataGrid_Listado_Vig_SOAT.HeaderForeColor = System.Drawing.Color.White;
             this.DataGrid_Listado_Vig_SOAT.Location = new System.Drawing.Point(12, 206);
             this.DataGrid_Listado_Vig_SOAT.Name = "DataGrid_Listado_Vig_SOAT";
+            this.DataGrid_Listado_Vig_SOAT.ReadOnly = true;
             this.DataGrid_Listado_Vig_SOAT.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(15)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGrid_Listado_Vig_SOAT.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGrid_Listado_Vig_SOAT.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.DataGrid_Listado_Vig_SOAT.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.DataGrid_Listado_Vig_SOAT.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataGrid_Listado_Vig_SOAT.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.DataGrid_Listado_Vig_SOAT.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.DataGrid_Listado_Vig_SOAT.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGrid_Listado_Vig_SOAT.RowTemplate.DividerHeight = 1;
+            this.DataGrid_Listado_Vig_SOAT.RowTemplate.Height = 42;
             this.DataGrid_Listado_Vig_SOAT.Size = new System.Drawing.Size(1240, 472);
             this.DataGrid_Listado_Vig_SOAT.TabIndex = 0;
             this.DataGrid_Listado_Vig_SOAT.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataGrid_Listado_Vig_SOAT_CellFormatting);
@@ -177,6 +190,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 681);
             this.panel1.TabIndex = 11;
+            // 
+            // DP_Mes
+            // 
+            this.DP_Mes.BackColor = System.Drawing.Color.Transparent;
+            this.DP_Mes.BorderRadius = 3;
+            this.DP_Mes.ForeColor = System.Drawing.Color.White;
+            this.DP_Mes.Items = new string[] {
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"};
+            this.DP_Mes.Location = new System.Drawing.Point(12, 139);
+            this.DP_Mes.Name = "DP_Mes";
+            this.DP_Mes.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(47)))));
+            this.DP_Mes.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
+            this.DP_Mes.selectedIndex = 0;
+            this.DP_Mes.Size = new System.Drawing.Size(417, 57);
+            this.DP_Mes.TabIndex = 7;
+            this.DP_Mes.onItemSelected += new System.EventHandler(this.DP_Mes_onItemSelected);
             // 
             // Listado_reporte_SOAT
             // 
@@ -209,5 +249,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField Buscar;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuCustomDataGrid DataGrid_Listado_Vig_SOAT;
+        private Bunifu.Framework.UI.BunifuDropdown DP_Mes;
     }
 }

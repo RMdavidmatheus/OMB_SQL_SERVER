@@ -43,7 +43,7 @@ namespace Proyecto_Omb_SQL_SERVER.Vistas
 
         private void PDF_Click(object sender, EventArgs e)
         {
-            iTextSharp.text.Image Logo = iTextSharp.text.Image.GetInstance("C:\\Users\\David PC\\Pictures\\Logo.png");
+            iTextSharp.text.Image Logo = iTextSharp.text.Image.GetInstance("C:\\Program Files\\OMB\\Programa OMB Seguros\\Images\\Logo.png");
             iTextSharp.text.Font palatino = FontFactory.GetFont("MS GOTHIC", 15, iTextSharp.text.Font.BOLD);
             palatino.SetColor(246, 246, 246);
             //CREANDO EL ARCHIVO CON ITEXTSHARP
