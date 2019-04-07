@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_1744B8CF3DAE442783637F49E88FA324"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1B5BB4853D87433B952944B0218A8E84"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -70,19 +76,19 @@
         "Entry"
         {
         "MsmKey" = "8:_5345483DC1B3F7CF98A620E465FD0E12"
-        "OwnerKey" = "8:_A276EF7F0ECA40B29AD50E9E9EEC8DB9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5345483DC1B3F7CF98A620E465FD0E12"
         "OwnerKey" = "8:_F86FDF5ABAE0408E9DBC3A6E0457B7F3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_61F142AB7FD747BC985E3D82F3D3D30C"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_5345483DC1B3F7CF98A620E465FD0E12"
+        "OwnerKey" = "8:_A276EF7F0ECA40B29AD50E9E9EEC8DB9"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_635FE9655A653A7DE2692A65CAAA3FC5"
+        "OwnerKey" = "8:_F86FDF5ABAE0408E9DBC3A6E0457B7F3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -95,12 +101,6 @@
         {
         "MsmKey" = "8:_635FE9655A653A7DE2692A65CAAA3FC5"
         "OwnerKey" = "8:_419C347A6E534855AE4DD67E799868E7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_635FE9655A653A7DE2692A65CAAA3FC5"
-        "OwnerKey" = "8:_F86FDF5ABAE0408E9DBC3A6E0457B7F3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -142,19 +142,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_635FE9655A653A7DE2692A65CAAA3FC5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_419C347A6E534855AE4DD67E799868E7"
+        "OwnerKey" = "8:_A276EF7F0ECA40B29AD50E9E9EEC8DB9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_F86FDF5ABAE0408E9DBC3A6E0457B7F3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5345483DC1B3F7CF98A620E465FD0E12"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -196,13 +196,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A276EF7F0ECA40B29AD50E9E9EEC8DB9"
+        "OwnerKey" = "8:_635FE9655A653A7DE2692A65CAAA3FC5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5345483DC1B3F7CF98A620E465FD0E12"
+        "OwnerKey" = "8:_419C347A6E534855AE4DD67E799868E7"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -223,6 +223,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -239,6 +247,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -268,6 +284,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1744B8CF3DAE442783637F49E88FA324"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\isotipo.ico"
+            "TargetName" = "8:isotipo.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_3858942905A644B0902DB36C3D31F55B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1B5BB4853D87433B952944B0218A8E84"
             {
             "SourcePath" = "8:..\\Images\\3.jpg"
@@ -512,26 +548,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_61F142AB7FD747BC985E3D82F3D3D30C"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\favicon.ico"
-            "TargetName" = "8:favicon.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_3858942905A644B0902DB36C3D31F55B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_635FE9655A653A7DE2692A65CAAA3FC5"
@@ -855,7 +871,7 @@
             "Target" = "8:_F86FDF5ABAE0408E9DBC3A6E0457B7F3"
             "Folder" = "8:_D789E196EA13496A916EBEAAC177C19F"
             "WorkingFolder" = "8:_3858942905A644B0902DB36C3D31F55B"
-            "Icon" = "8:_61F142AB7FD747BC985E3D82F3D3D30C"
+            "Icon" = "8:_1744B8CF3DAE442783637F49E88FA324"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_73F3B781D73A45A990EF7D7A9A16F444"
@@ -869,7 +885,7 @@
             "Target" = "8:_F86FDF5ABAE0408E9DBC3A6E0457B7F3"
             "Folder" = "8:_7DB10AC47E7546C2A90C2FC6485BF114"
             "WorkingFolder" = "8:_3858942905A644B0902DB36C3D31F55B"
-            "Icon" = "8:_61F142AB7FD747BC985E3D82F3D3D30C"
+            "Icon" = "8:_1744B8CF3DAE442783637F49E88FA324"
             "Feature" = "8:"
             }
         }
@@ -1273,7 +1289,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_419C347A6E534855AE4DD67E799868E7"
             {
-            "SourcePath" = "8:..\\Capa_LogIn\\obj\\Release\\Capa_LogIn.dll"
+            "SourcePath" = "8:..\\Capa_LogIn\\obj\\Debug\\Capa_LogIn.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3858942905A644B0902DB36C3D31F55B"
@@ -1301,7 +1317,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A276EF7F0ECA40B29AD50E9E9EEC8DB9"
             {
-            "SourcePath" = "8:..\\Capa Logica\\obj\\Release\\Capa Logica.dll"
+            "SourcePath" = "8:..\\Capa Logica\\obj\\Debug\\Capa Logica.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3858942905A644B0902DB36C3D31F55B"

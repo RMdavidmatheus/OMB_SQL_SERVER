@@ -13,7 +13,7 @@ namespace Capa_LogIn
     {
         // CONFUGURACION DE LA BASE DE DATOS SQL SERVER
 
-        private SqlConnection Conexion_Log_In = new SqlConnection("Data Source=sql5035.site4now.net;Initial Catalog=DB_A44CDA_OMBSeguros;User ID=DB_A44CDA_OMBSeguros_admin;Password=DAVIDALE98");
+        private SqlConnection Conexion_Log_In = new SqlConnection("Server=tcp:baseprincipalomb.database.windows.net,1433;Initial Catalog=OMB_Seguros;Persist Security Info=False;User ID=DavidMateus;Password=Alejandro98;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
         // METODOS PARA CONECTAR O DESCONECTAR
         public SqlConnection Conectar()
